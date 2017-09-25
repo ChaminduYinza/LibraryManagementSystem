@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import DBConnection.dbConnection;
+import DBConnection.DBConnection;
 import Model.BookModel;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,7 +20,7 @@ import java.sql.Statement;
 public class BookController {
 
     public static boolean addBook(BookModel bModel) throws ClassNotFoundException, SQLException {
-        Connection connection = dbConnection.getDBConnection().getConnection();
+        Connection connection = DBConnection.getDBConnection().getConnection();
         String sql = "INSERT INTO BOOKS(BID,BOOKNAME,AUTHOR,PRICE,ISBN,DESCRIPTION,AVAILABILITY) VALUES (?,?,?,?,?,?,?)";
         PreparedStatement preparestatement = connection.prepareStatement(sql);
         preparestatement.setString(1, bModel.getBID());
@@ -36,7 +36,7 @@ public class BookController {
     }
 
     public static boolean updateBook(BookModel bModel) throws ClassNotFoundException, SQLException {
-        Connection connection = dbConnection.getDBConnection().getConnection();
+        Connection connection = DBConnection.getDBConnection().getConnection();
         String sql = "UPDATE BOOKS SET BOOKNAME = ?, AUTHOR = ?, PRICE = ? , ISBN = ? , DESCRIPTION = ?, AVAILABILITY = ? WHERE BID = ?";
         PreparedStatement preparestatement = connection.prepareStatement(sql);
 
@@ -53,7 +53,7 @@ public class BookController {
     }
 
     public static BookModel searchBookByISBN(String ISBN) throws ClassNotFoundException, SQLException {
-        Connection connecton = dbConnection.getDBConnection().getConnection();
+        Connection connecton = DBConnection.getDBConnection().getConnection();
         String sql = "SELECT * FROM BOOKS where ISBN = '" + ISBN + "'";
         Statement createStatement = connecton.createStatement();
         ResultSet rst = createStatement.executeQuery(sql);
@@ -68,7 +68,7 @@ public class BookController {
     }
 
     public static BookModel getAllBookDetails() throws ClassNotFoundException, SQLException {
-        Connection connecton = dbConnection.getDBConnection().getConnection();
+        Connection connecton = DBConnection.getDBConnection().getConnection();
         String sql = "SELECT * FROM BOOKS";
         Statement createStatement = connecton.createStatement();
         ResultSet rst = createStatement.executeQuery(sql);
