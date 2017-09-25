@@ -80,13 +80,13 @@ public class SystemLogin extends javax.swing.JFrame {
         LoginPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         emailLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        emailLabel.setForeground(new java.awt.Color(42, 135, 235));
+        emailLabel.setForeground(new java.awt.Color(0, 102, 102));
         emailLabel.setText("Email");
         LoginPanel.add(emailLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 70, 30));
 
         passwordLabel.setBackground(new java.awt.Color(255, 255, 255));
         passwordLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        passwordLabel.setForeground(new java.awt.Color(42, 135, 235));
+        passwordLabel.setForeground(new java.awt.Color(0, 102, 102));
         passwordLabel.setText("Password");
         LoginPanel.add(passwordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 60, 30));
 
@@ -95,7 +95,7 @@ public class SystemLogin extends javax.swing.JFrame {
         jTextFieldEmail.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextFieldEmail.setToolTipText("Enter Username");
         jTextFieldEmail.setAutoscrolls(false);
-        jTextFieldEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 153, 255)));
+        jTextFieldEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)));
         LoginPanel.add(jTextFieldEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 250, 30));
 
         jButtonUserLogin.setBackground(new java.awt.Color(255, 255, 255));
@@ -103,7 +103,7 @@ public class SystemLogin extends javax.swing.JFrame {
         jButtonUserLogin.setForeground(new java.awt.Color(0, 102, 102));
         jButtonUserLogin.setText("Login");
         jButtonUserLogin.setToolTipText("");
-        jButtonUserLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 153, 255)));
+        jButtonUserLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)));
         jButtonUserLogin.setFocusPainted(false);
         jButtonUserLogin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -125,7 +125,7 @@ public class SystemLogin extends javax.swing.JFrame {
         jPasswordFieldUserPassword.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jPasswordFieldUserPassword.setToolTipText("Enter Password");
         jPasswordFieldUserPassword.setAutoscrolls(false);
-        jPasswordFieldUserPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 153, 255)));
+        jPasswordFieldUserPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)));
         LoginPanel.add(jPasswordFieldUserPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 250, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/login.png"))); // NOI18N

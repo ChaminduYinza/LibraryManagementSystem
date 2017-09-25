@@ -9,6 +9,7 @@ import java.awt.Color;
 import static java.lang.Thread.sleep;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -20,12 +21,12 @@ public class LibraryMain extends javax.swing.JFrame {
      * Creates new form LibraryMain
      */
     static String USER;
-    
+
     public LibraryMain(String userName) {
         initComponents();
-        
+
         USER = userName;
-        jLabelWelcomeUser.setText("Welcome "+USER);
+        jLabelWelcomeUser.setText("Welcome " + USER);
         jPanelReserveBook.setVisible(false);
         jPanelRequestedBookList.setVisible(false);
         jPanelPendingReturn.setVisible(false);
@@ -33,7 +34,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jPanelFeedback.setVisible(false);
         jPanelSettings.setVisible(false);
         clock();
-        
+
     }
 
     //this method call for show and hide toggle panels when button click
@@ -92,7 +93,7 @@ public class LibraryMain extends javax.swing.JFrame {
                 break;
         }
     }
-    
+
     public void clock() {
         Thread clock = new Thread() {
             public void run() {
@@ -109,6 +110,7 @@ public class LibraryMain extends javax.swing.JFrame {
         };
         clock.start();
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -931,10 +933,14 @@ public class LibraryMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonSettingsActionPerformed
 
     private void jButtonLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogoutActionPerformed
-        // TODO add your handling code here:
-        this.dispose();
-        SystemLogin login = new SystemLogin();
-        login.setVisible(true);
+
+        int result = JOptionPane.showConfirmDialog(rootPane, "Are you sure want to Logout?", "Confirm Logout", 0);
+
+        if (result == 0) {
+            this.dispose();
+            SystemLogin login = new SystemLogin();
+            login.setVisible(true);
+        }
     }//GEN-LAST:event_jButtonLogoutActionPerformed
 
     /**
