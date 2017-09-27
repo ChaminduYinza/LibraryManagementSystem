@@ -133,7 +133,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/View/Images/menuBtn.png"/>
+                  <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\menuBtn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="RESERVE BOOK"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -170,7 +170,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/View/Images/menuBtn.png"/>
+                  <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\menuBtn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="REQUESTED LIST"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -207,7 +207,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/View/Images/menuBtn.png"/>
+                  <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\menuBtn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="PENDING BOOKS"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -244,7 +244,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/View/Images/menuBtn.png"/>
+                  <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\menuBtn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="HISTORY"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -281,7 +281,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/View/Images/menuBtn.png"/>
+                  <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\menuBtn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="FEEDBACK"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -318,7 +318,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/View/Images/logout.png"/>
+                  <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\logout.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="LOGOUT"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -355,7 +355,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/View/Images/settings.png"/>
+                  <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\settings.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="SETTINGS"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -557,7 +557,7 @@
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/View/Images/reservebtn.png"/>
+                              <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Reserve"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -588,7 +588,7 @@
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/View/Images/searchbtn.png"/>
+                              <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\searchbtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Search"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -787,7 +787,7 @@
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/View/Images/reservebtn.png"/>
+                              <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Confirm"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -971,7 +971,7 @@
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/View/Images/reservebtn.png"/>
+                              <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Cancel Request"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1155,7 +1155,7 @@
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/View/Images/reservebtn.png"/>
+                              <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Cancel Request"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1339,7 +1339,7 @@
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/View/Images/searchbtn.png"/>
+                              <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Cancel Request"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1523,7 +1523,7 @@
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/View/Images/reservebtn.png"/>
+                              <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Cancel Request"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1722,7 +1722,7 @@
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/View/Images/reservebtn.png"/>
+                              <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Confirm"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1906,7 +1906,7 @@
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/View/Images/reservebtn.png"/>
+                              <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Cancel Request"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
