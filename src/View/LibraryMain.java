@@ -221,7 +221,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jPanelHeader.setBackground(new java.awt.Color(0, 102, 102));
         jPanelHeader.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/librarylogo.png"))); // NOI18N
+        jLabelLogo.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\librarylogo.png")); // NOI18N
         jPanelHeader.add(jLabelLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jLabelWelcomeUser.setForeground(new java.awt.Color(204, 204, 204));
@@ -242,10 +242,10 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonReserveBook.setForeground(new java.awt.Color(255, 255, 255));
         jButtonReserveBook.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\menuBtn.png")); // NOI18N
         jButtonReserveBook.setText("RESERVE BOOK");
-        jButtonReserveBook.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jButtonReserveBook.setFocusPainted(false);
         jButtonReserveBook.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButtonReserveBook.setIconTextGap(5);
+        jButtonReserveBook.setMargin(new java.awt.Insets(2, 0, 2, 5));
         jButtonReserveBook.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jButtonReserveBookMouseEntered(evt);
@@ -266,10 +266,10 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonRequestedBookList.setForeground(new java.awt.Color(255, 255, 255));
         jButtonRequestedBookList.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\menuBtn.png")); // NOI18N
         jButtonRequestedBookList.setText("REQUESTED LIST");
-        jButtonRequestedBookList.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jButtonRequestedBookList.setFocusPainted(false);
         jButtonRequestedBookList.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButtonRequestedBookList.setIconTextGap(5);
+        jButtonRequestedBookList.setMargin(new java.awt.Insets(2, 0, 2, 5));
         jButtonRequestedBookList.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jButtonRequestedBookListMouseEntered(evt);
@@ -290,10 +290,10 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonPendingReturn.setForeground(new java.awt.Color(255, 255, 255));
         jButtonPendingReturn.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\menuBtn.png")); // NOI18N
         jButtonPendingReturn.setText("PENDING BOOKS");
-        jButtonPendingReturn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jButtonPendingReturn.setFocusPainted(false);
         jButtonPendingReturn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButtonPendingReturn.setIconTextGap(5);
+        jButtonPendingReturn.setMargin(new java.awt.Insets(2, 0, 2, 5));
         jButtonPendingReturn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jButtonPendingReturnMouseEntered(evt);
@@ -314,10 +314,10 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonHistory.setForeground(new java.awt.Color(255, 255, 255));
         jButtonHistory.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\menuBtn.png")); // NOI18N
         jButtonHistory.setText("HISTORY");
-        jButtonHistory.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jButtonHistory.setFocusPainted(false);
         jButtonHistory.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButtonHistory.setIconTextGap(5);
+        jButtonHistory.setMargin(new java.awt.Insets(2, 0, 2, 5));
         jButtonHistory.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jButtonHistoryMouseEntered(evt);
@@ -338,10 +338,10 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonFeedback.setForeground(new java.awt.Color(255, 255, 255));
         jButtonFeedback.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\menuBtn.png")); // NOI18N
         jButtonFeedback.setText("FEEDBACK");
-        jButtonFeedback.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jButtonFeedback.setFocusPainted(false);
         jButtonFeedback.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButtonFeedback.setIconTextGap(5);
+        jButtonFeedback.setMargin(new java.awt.Insets(2, 0, 2, 5));
         jButtonFeedback.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jButtonFeedback11MouseEntered(evt);
@@ -362,10 +362,10 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonLogout.setForeground(new java.awt.Color(255, 255, 255));
         jButtonLogout.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\logout.png")); // NOI18N
         jButtonLogout.setText("LOGOUT");
-        jButtonLogout.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jButtonLogout.setFocusPainted(false);
         jButtonLogout.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButtonLogout.setIconTextGap(5);
+        jButtonLogout.setMargin(new java.awt.Insets(2, 0, 2, 5));
         jButtonLogout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jButtonLogout11MouseEntered(evt);
@@ -386,10 +386,10 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonSettings.setForeground(new java.awt.Color(255, 255, 255));
         jButtonSettings.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\settings.png")); // NOI18N
         jButtonSettings.setText("SETTINGS");
-        jButtonSettings.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jButtonSettings.setFocusPainted(false);
         jButtonSettings.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButtonSettings.setIconTextGap(5);
+        jButtonSettings.setMargin(new java.awt.Insets(2, 0, 2, 5));
         jButtonSettings.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jButtonSettings11MouseEntered(evt);
@@ -452,7 +452,6 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonSearchBook.setForeground(new java.awt.Color(255, 255, 255));
         jButtonSearchBook.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonSearchBook.setText("Reserve");
-        jButtonSearchBook.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)));
         jButtonSearchBook.setFocusable(false);
         jButtonSearchBook.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanelSearchBookTab.add(jButtonSearchBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 490, 100, 30));
@@ -462,7 +461,6 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonSearchBook1.setForeground(new java.awt.Color(255, 255, 255));
         jButtonSearchBook1.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\searchbtn.png")); // NOI18N
         jButtonSearchBook1.setText("Search");
-        jButtonSearchBook1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)));
         jButtonSearchBook1.setFocusable(false);
         jButtonSearchBook1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanelSearchBookTab.add(jButtonSearchBook1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 490, 100, 30));
@@ -505,7 +503,6 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonConfirmReservation.setForeground(new java.awt.Color(255, 255, 255));
         jButtonConfirmReservation.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonConfirmReservation.setText("Confirm");
-        jButtonConfirmReservation.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)));
         jButtonConfirmReservation.setFocusable(false);
         jButtonConfirmReservation.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanelReserveBookTab.add(jButtonConfirmReservation, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 450, 100, 30));
@@ -558,7 +555,6 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonCancelRequest.setForeground(new java.awt.Color(255, 255, 255));
         jButtonCancelRequest.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonCancelRequest.setText("Cancel Request");
-        jButtonCancelRequest.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)));
         jButtonCancelRequest.setFocusable(false);
         jButtonCancelRequest.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanelRequestedList.add(jButtonCancelRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, 120, 30));
@@ -611,7 +607,6 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonCancelRequest1.setForeground(new java.awt.Color(255, 255, 255));
         jButtonCancelRequest1.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonCancelRequest1.setText("Cancel Request");
-        jButtonCancelRequest1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)));
         jButtonCancelRequest1.setFocusable(false);
         jButtonCancelRequest1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanelPending.add(jButtonCancelRequest1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, 120, 30));
@@ -664,7 +659,6 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonCancelRequest2.setForeground(new java.awt.Color(255, 255, 255));
         jButtonCancelRequest2.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonCancelRequest2.setText("Cancel Request");
-        jButtonCancelRequest2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)));
         jButtonCancelRequest2.setFocusable(false);
         jButtonCancelRequest2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanelHistory.add(jButtonCancelRequest2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, 120, 30));
@@ -717,7 +711,6 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonCancelRequest3.setForeground(new java.awt.Color(255, 255, 255));
         jButtonCancelRequest3.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonCancelRequest3.setText("Cancel Request");
-        jButtonCancelRequest3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)));
         jButtonCancelRequest3.setFocusable(false);
         jButtonCancelRequest3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanelFeedback1.add(jButtonCancelRequest3, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, 120, 30));
@@ -760,7 +753,6 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonConfirmReservation1.setForeground(new java.awt.Color(255, 255, 255));
         jButtonConfirmReservation1.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonConfirmReservation1.setText("Confirm");
-        jButtonConfirmReservation1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)));
         jButtonConfirmReservation1.setFocusable(false);
         jButtonConfirmReservation1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanelSubmitFeedback.add(jButtonConfirmReservation1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 450, 100, 30));
@@ -813,7 +805,6 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonCancelRequest4.setForeground(new java.awt.Color(255, 255, 255));
         jButtonCancelRequest4.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonCancelRequest4.setText("Cancel Request");
-        jButtonCancelRequest4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)));
         jButtonCancelRequest4.setFocusable(false);
         jButtonCancelRequest4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanelEditProfile.add(jButtonCancelRequest4, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, 120, 30));

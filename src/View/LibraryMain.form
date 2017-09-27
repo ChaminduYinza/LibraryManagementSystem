@@ -68,7 +68,7 @@
             <Component class="javax.swing.JLabel" name="jLabelLogo">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/View/Images/librarylogo.png"/>
+                  <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\librarylogo.png"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -136,16 +136,12 @@
                   <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\menuBtn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="RESERVE BOOK"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder>
-                      <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
-                    </LineBorder>
-                  </Border>
-                </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="iconTextGap" type="int" value="5"/>
+                <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                  <Insets value="[2, 0, 2, 5]"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonReserveBookMouseEntered"/>
@@ -173,16 +169,12 @@
                   <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\menuBtn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="REQUESTED LIST"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder>
-                      <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
-                    </LineBorder>
-                  </Border>
-                </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="iconTextGap" type="int" value="5"/>
+                <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                  <Insets value="[2, 0, 2, 5]"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonRequestedBookListMouseEntered"/>
@@ -210,16 +202,12 @@
                   <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\menuBtn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="PENDING BOOKS"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder>
-                      <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
-                    </LineBorder>
-                  </Border>
-                </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="iconTextGap" type="int" value="5"/>
+                <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                  <Insets value="[2, 0, 2, 5]"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonPendingReturnMouseEntered"/>
@@ -247,16 +235,12 @@
                   <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\menuBtn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="HISTORY"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder>
-                      <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
-                    </LineBorder>
-                  </Border>
-                </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="iconTextGap" type="int" value="5"/>
+                <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                  <Insets value="[2, 0, 2, 5]"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonHistoryMouseEntered"/>
@@ -284,16 +268,12 @@
                   <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\menuBtn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="FEEDBACK"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder>
-                      <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
-                    </LineBorder>
-                  </Border>
-                </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="iconTextGap" type="int" value="5"/>
+                <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                  <Insets value="[2, 0, 2, 5]"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonFeedback11MouseEntered"/>
@@ -321,16 +301,12 @@
                   <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\logout.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="LOGOUT"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder>
-                      <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
-                    </LineBorder>
-                  </Border>
-                </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="iconTextGap" type="int" value="5"/>
+                <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                  <Insets value="[2, 0, 2, 5]"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonLogout11MouseEntered"/>
@@ -358,16 +334,12 @@
                   <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\settings.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="SETTINGS"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder>
-                      <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
-                    </LineBorder>
-                  </Border>
-                </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="iconTextGap" type="int" value="5"/>
+                <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                  <Insets value="[2, 0, 2, 5]"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonSettings11MouseEntered"/>
@@ -560,13 +532,6 @@
                               <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Reserve"/>
-                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder>
-                                  <Color PropertyName="color" blue="66" green="66" red="0" type="rgb"/>
-                                </LineBorder>
-                              </Border>
-                            </Property>
                             <Property name="focusable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="2"/>
                           </Properties>
@@ -591,13 +556,6 @@
                               <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\searchbtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Search"/>
-                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder>
-                                  <Color PropertyName="color" blue="66" green="66" red="0" type="rgb"/>
-                                </LineBorder>
-                              </Border>
-                            </Property>
                             <Property name="focusable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="2"/>
                           </Properties>
@@ -790,13 +748,6 @@
                               <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Confirm"/>
-                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder>
-                                  <Color PropertyName="color" blue="66" green="66" red="0" type="rgb"/>
-                                </LineBorder>
-                              </Border>
-                            </Property>
                             <Property name="focusable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="2"/>
                           </Properties>
@@ -974,13 +925,6 @@
                               <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Cancel Request"/>
-                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder>
-                                  <Color PropertyName="color" blue="66" green="66" red="0" type="rgb"/>
-                                </LineBorder>
-                              </Border>
-                            </Property>
                             <Property name="focusable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="2"/>
                           </Properties>
@@ -1158,13 +1102,6 @@
                               <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Cancel Request"/>
-                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder>
-                                  <Color PropertyName="color" blue="66" green="66" red="0" type="rgb"/>
-                                </LineBorder>
-                              </Border>
-                            </Property>
                             <Property name="focusable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="2"/>
                           </Properties>
@@ -1342,13 +1279,6 @@
                               <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Cancel Request"/>
-                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder>
-                                  <Color PropertyName="color" blue="66" green="66" red="0" type="rgb"/>
-                                </LineBorder>
-                              </Border>
-                            </Property>
                             <Property name="focusable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="2"/>
                           </Properties>
@@ -1526,13 +1456,6 @@
                               <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Cancel Request"/>
-                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder>
-                                  <Color PropertyName="color" blue="66" green="66" red="0" type="rgb"/>
-                                </LineBorder>
-                              </Border>
-                            </Property>
                             <Property name="focusable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="2"/>
                           </Properties>
@@ -1725,13 +1648,6 @@
                               <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Confirm"/>
-                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder>
-                                  <Color PropertyName="color" blue="66" green="66" red="0" type="rgb"/>
-                                </LineBorder>
-                              </Border>
-                            </Property>
                             <Property name="focusable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="2"/>
                           </Properties>
@@ -1909,13 +1825,6 @@
                               <Image iconType="2" name="C:\SLIIT\Library-Management-System\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Cancel Request"/>
-                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder>
-                                  <Color PropertyName="color" blue="66" green="66" red="0" type="rgb"/>
-                                </LineBorder>
-                              </Border>
-                            </Property>
                             <Property name="focusable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="2"/>
                           </Properties>
