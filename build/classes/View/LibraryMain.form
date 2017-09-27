@@ -534,6 +534,9 @@
                             <Property name="text" type="java.lang.String" value="Reserve"/>
                             <Property name="focusable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="2"/>
+                            <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                              <Insets value="[2, 0, 2, 5]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -558,6 +561,9 @@
                             <Property name="text" type="java.lang.String" value="Search"/>
                             <Property name="focusable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="2"/>
+                            <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                              <Insets value="[2, 0, 2, 5]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -927,6 +933,9 @@
                             <Property name="text" type="java.lang.String" value="Cancel Request"/>
                             <Property name="focusable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="2"/>
+                            <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                              <Insets value="[2, 0, 2, 5]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -1104,6 +1113,9 @@
                             <Property name="text" type="java.lang.String" value="Cancel Request"/>
                             <Property name="focusable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="2"/>
+                            <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                              <Insets value="[2, 0, 2, 5]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -1281,6 +1293,9 @@
                             <Property name="text" type="java.lang.String" value="Cancel Request"/>
                             <Property name="focusable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="2"/>
+                            <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                              <Insets value="[2, 0, 2, 5]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -1458,6 +1473,9 @@
                             <Property name="text" type="java.lang.String" value="Cancel Request"/>
                             <Property name="focusable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="2"/>
+                            <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                              <Insets value="[2, 0, 2, 5]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -1650,6 +1668,9 @@
                             <Property name="text" type="java.lang.String" value="Confirm"/>
                             <Property name="focusable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="2"/>
+                            <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                              <Insets value="[2, 0, 2, 5]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -1827,6 +1848,9 @@
                             <Property name="text" type="java.lang.String" value="Cancel Request"/>
                             <Property name="focusable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="2"/>
+                            <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                              <Insets value="[2, 0, 2, 5]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

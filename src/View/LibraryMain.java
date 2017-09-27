@@ -454,6 +454,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonSearchBook.setText("Reserve");
         jButtonSearchBook.setFocusable(false);
         jButtonSearchBook.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButtonSearchBook.setMargin(new java.awt.Insets(2, 0, 2, 5));
         jPanelSearchBookTab.add(jButtonSearchBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 490, 100, 30));
 
         jButtonSearchBook1.setBackground(new java.awt.Color(0, 102, 102));
@@ -463,6 +464,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonSearchBook1.setText("Search");
         jButtonSearchBook1.setFocusable(false);
         jButtonSearchBook1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButtonSearchBook1.setMargin(new java.awt.Insets(2, 0, 2, 5));
         jPanelSearchBookTab.add(jButtonSearchBook1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 490, 100, 30));
 
         jTabbedPaneReserveBook.addTab("Search Book", jPanelSearchBookTab);
@@ -557,6 +559,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonCancelRequest.setText("Cancel Request");
         jButtonCancelRequest.setFocusable(false);
         jButtonCancelRequest.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButtonCancelRequest.setMargin(new java.awt.Insets(2, 0, 2, 5));
         jPanelRequestedList.add(jButtonCancelRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, 120, 30));
 
         jTabbedPaneRequestedList.addTab("Requested Book List", jPanelRequestedList);
@@ -609,6 +612,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonCancelRequest1.setText("Cancel Request");
         jButtonCancelRequest1.setFocusable(false);
         jButtonCancelRequest1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButtonCancelRequest1.setMargin(new java.awt.Insets(2, 0, 2, 5));
         jPanelPending.add(jButtonCancelRequest1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, 120, 30));
 
         jTabbedPanePendingReturn.addTab("Pending Return Book List", jPanelPending);
@@ -661,6 +665,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonCancelRequest2.setText("Cancel Request");
         jButtonCancelRequest2.setFocusable(false);
         jButtonCancelRequest2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButtonCancelRequest2.setMargin(new java.awt.Insets(2, 0, 2, 5));
         jPanelHistory.add(jButtonCancelRequest2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, 120, 30));
 
         jTabbedPanelHistory.addTab("Borrowed Book History", jPanelHistory);
@@ -713,6 +718,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonCancelRequest3.setText("Cancel Request");
         jButtonCancelRequest3.setFocusable(false);
         jButtonCancelRequest3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButtonCancelRequest3.setMargin(new java.awt.Insets(2, 0, 2, 5));
         jPanelFeedback1.add(jButtonCancelRequest3, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, 120, 30));
 
         jTabbedPanelFeedback.addTab("Feedbacks of Books", jPanelFeedback1);
@@ -755,6 +761,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonConfirmReservation1.setText("Confirm");
         jButtonConfirmReservation1.setFocusable(false);
         jButtonConfirmReservation1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButtonConfirmReservation1.setMargin(new java.awt.Insets(2, 0, 2, 5));
         jPanelSubmitFeedback.add(jButtonConfirmReservation1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 450, 100, 30));
 
         jTabbedPanelFeedback.addTab("Submit Feedback", jPanelSubmitFeedback);
@@ -807,6 +814,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonCancelRequest4.setText("Cancel Request");
         jButtonCancelRequest4.setFocusable(false);
         jButtonCancelRequest4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButtonCancelRequest4.setMargin(new java.awt.Insets(2, 0, 2, 5));
         jPanelEditProfile.add(jButtonCancelRequest4, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, 120, 30));
 
         jTabbedPanelHistory1.addTab("Edit User Profile", jPanelEditProfile);
