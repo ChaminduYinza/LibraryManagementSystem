@@ -15,7 +15,7 @@ import java.sql.SQLException;
  *
  * @author Y`inza
  */
-public class bookController {
+public class BookController {
 
     public static boolean addBook(BookModel bModel) throws ClassNotFoundException, SQLException {
         Connection connection = DBConnection.getDBConnection().getConnection();
