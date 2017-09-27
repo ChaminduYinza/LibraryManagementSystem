@@ -221,7 +221,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jPanelHeader.setBackground(new java.awt.Color(0, 102, 102));
         jPanelHeader.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelLogo.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\librarylogo.png")); // NOI18N
+        jLabelLogo.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\librarylogo.png")); // NOI18N
         jPanelHeader.add(jLabelLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jLabelWelcomeUser.setForeground(new java.awt.Color(204, 204, 204));
@@ -240,7 +240,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonReserveBook.setBackground(new java.awt.Color(0, 102, 102));
         jButtonReserveBook.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 18)); // NOI18N
         jButtonReserveBook.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonReserveBook.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\menuBtn.png")); // NOI18N
+        jButtonReserveBook.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\menuBtn.png")); // NOI18N
         jButtonReserveBook.setText("RESERVE BOOK");
         jButtonReserveBook.setFocusPainted(false);
         jButtonReserveBook.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -264,7 +264,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonRequestedBookList.setBackground(new java.awt.Color(0, 102, 102));
         jButtonRequestedBookList.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 18)); // NOI18N
         jButtonRequestedBookList.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonRequestedBookList.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\menuBtn.png")); // NOI18N
+        jButtonRequestedBookList.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\menuBtn.png")); // NOI18N
         jButtonRequestedBookList.setText("REQUESTED LIST");
         jButtonRequestedBookList.setFocusPainted(false);
         jButtonRequestedBookList.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -288,7 +288,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonPendingReturn.setBackground(new java.awt.Color(0, 102, 102));
         jButtonPendingReturn.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 18)); // NOI18N
         jButtonPendingReturn.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonPendingReturn.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\menuBtn.png")); // NOI18N
+        jButtonPendingReturn.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\menuBtn.png")); // NOI18N
         jButtonPendingReturn.setText("PENDING BOOKS");
         jButtonPendingReturn.setFocusPainted(false);
         jButtonPendingReturn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -312,7 +312,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonHistory.setBackground(new java.awt.Color(0, 102, 102));
         jButtonHistory.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 18)); // NOI18N
         jButtonHistory.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonHistory.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\menuBtn.png")); // NOI18N
+        jButtonHistory.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\menuBtn.png")); // NOI18N
         jButtonHistory.setText("HISTORY");
         jButtonHistory.setFocusPainted(false);
         jButtonHistory.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -336,7 +336,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonFeedback.setBackground(new java.awt.Color(0, 102, 102));
         jButtonFeedback.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 18)); // NOI18N
         jButtonFeedback.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonFeedback.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\menuBtn.png")); // NOI18N
+        jButtonFeedback.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\menuBtn.png")); // NOI18N
         jButtonFeedback.setText("FEEDBACK");
         jButtonFeedback.setFocusPainted(false);
         jButtonFeedback.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -360,7 +360,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonLogout.setBackground(new java.awt.Color(0, 102, 102));
         jButtonLogout.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 18)); // NOI18N
         jButtonLogout.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonLogout.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\logout.png")); // NOI18N
+        jButtonLogout.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\logout.png")); // NOI18N
         jButtonLogout.setText("LOGOUT");
         jButtonLogout.setFocusPainted(false);
         jButtonLogout.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -384,7 +384,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonSettings.setBackground(new java.awt.Color(0, 102, 102));
         jButtonSettings.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 18)); // NOI18N
         jButtonSettings.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSettings.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\settings.png")); // NOI18N
+        jButtonSettings.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\settings.png")); // NOI18N
         jButtonSettings.setText("SETTINGS");
         jButtonSettings.setFocusPainted(false);
         jButtonSettings.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -450,7 +450,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonSearchBook.setBackground(new java.awt.Color(0, 102, 102));
         jButtonSearchBook.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButtonSearchBook.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSearchBook.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\reservebtn.png")); // NOI18N
+        jButtonSearchBook.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonSearchBook.setText("Reserve");
         jButtonSearchBook.setFocusable(false);
         jButtonSearchBook.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -459,7 +459,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonSearchBook1.setBackground(new java.awt.Color(0, 102, 102));
         jButtonSearchBook1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButtonSearchBook1.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSearchBook1.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\searchbtn.png")); // NOI18N
+        jButtonSearchBook1.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\searchbtn.png")); // NOI18N
         jButtonSearchBook1.setText("Search");
         jButtonSearchBook1.setFocusable(false);
         jButtonSearchBook1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -501,7 +501,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonConfirmReservation.setBackground(new java.awt.Color(0, 102, 102));
         jButtonConfirmReservation.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButtonConfirmReservation.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonConfirmReservation.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\reservebtn.png")); // NOI18N
+        jButtonConfirmReservation.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonConfirmReservation.setText("Confirm");
         jButtonConfirmReservation.setFocusable(false);
         jButtonConfirmReservation.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -553,7 +553,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonCancelRequest.setBackground(new java.awt.Color(0, 102, 102));
         jButtonCancelRequest.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButtonCancelRequest.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonCancelRequest.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\reservebtn.png")); // NOI18N
+        jButtonCancelRequest.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonCancelRequest.setText("Cancel Request");
         jButtonCancelRequest.setFocusable(false);
         jButtonCancelRequest.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -605,7 +605,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonCancelRequest1.setBackground(new java.awt.Color(0, 102, 102));
         jButtonCancelRequest1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButtonCancelRequest1.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonCancelRequest1.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\reservebtn.png")); // NOI18N
+        jButtonCancelRequest1.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonCancelRequest1.setText("Cancel Request");
         jButtonCancelRequest1.setFocusable(false);
         jButtonCancelRequest1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -657,7 +657,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonCancelRequest2.setBackground(new java.awt.Color(0, 102, 102));
         jButtonCancelRequest2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButtonCancelRequest2.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonCancelRequest2.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\reservebtn.png")); // NOI18N
+        jButtonCancelRequest2.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonCancelRequest2.setText("Cancel Request");
         jButtonCancelRequest2.setFocusable(false);
         jButtonCancelRequest2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -709,7 +709,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonCancelRequest3.setBackground(new java.awt.Color(0, 102, 102));
         jButtonCancelRequest3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButtonCancelRequest3.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonCancelRequest3.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\reservebtn.png")); // NOI18N
+        jButtonCancelRequest3.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonCancelRequest3.setText("Cancel Request");
         jButtonCancelRequest3.setFocusable(false);
         jButtonCancelRequest3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -751,7 +751,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonConfirmReservation1.setBackground(new java.awt.Color(0, 102, 102));
         jButtonConfirmReservation1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButtonConfirmReservation1.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonConfirmReservation1.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\reservebtn.png")); // NOI18N
+        jButtonConfirmReservation1.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonConfirmReservation1.setText("Confirm");
         jButtonConfirmReservation1.setFocusable(false);
         jButtonConfirmReservation1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -803,7 +803,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jButtonCancelRequest4.setBackground(new java.awt.Color(0, 102, 102));
         jButtonCancelRequest4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButtonCancelRequest4.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonCancelRequest4.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\reservebtn.png")); // NOI18N
+        jButtonCancelRequest4.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonCancelRequest4.setText("Cancel Request");
         jButtonCancelRequest4.setFocusable(false);
         jButtonCancelRequest4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
