@@ -128,7 +128,7 @@ public class SystemLogin extends javax.swing.JFrame {
         jPasswordFieldUserPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)));
         LoginPanel.add(jPasswordFieldUserPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 250, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\Library-Management-System\\src\\View\\Images\\login.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\login.png")); // NOI18N
         LoginPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 130, 120));
 
         jDesktopPaneLogin.add(LoginPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 370));
