@@ -19,17 +19,39 @@ public class BookModel {
     String isbn;
     String description;
     String availability;
+    String version;
+    String quantity;
 
-    public BookModel(String BID, String BOOKNAME, String AUTHOR, String PRICE, String ISBN, String DESCRIPTION, String AVAILABILITY) {
-        this.bId = BID;
-        this.bookName = BOOKNAME;
-        this.author = AUTHOR;
-        this.price = PRICE;
-        this.isbn = ISBN;
-        this.description = DESCRIPTION;
-        this.availability = AVAILABILITY;
+    public BookModel(String bId, String bookName, String author, String price, String isbn, String description, String availability, String version, String quantity) {
+        this.bId = bId;
+        this.bookName = bookName;
+        this.author = author;
+        this.price = price;
+        this.isbn = isbn;
+        this.description = description;
+        this.availability = availability;
+        this.version = version;
+        this.quantity = quantity;
     }
 
+    public String getVersion() {
+        return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
+    }
+
+   
+    
     public String getbId() {
         return bId;
     }

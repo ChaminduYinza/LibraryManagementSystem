@@ -176,7 +176,7 @@ public class SystemLogin extends javax.swing.JFrame {
                         System.out.println("Logged in successfully");
                         //set visibility of login and library member
                         viewLoginFrame(false);
-                        LibraryMain member=new LibraryMain(user.getEmail());
+                        MemberMain member=new MemberMain(user.getEmail());
                         member.setVisible(true);
                         this.dispose();
 

@@ -22,7 +22,7 @@ public class BookController {
 
     public static boolean addBook(BookModel bModel) throws ClassNotFoundException, SQLException {
         Connection connection = DBConnection.getDBConnection().getConnection();
-        String sql = "INSERT INTO BOOKS(BID,BOOKNAME,AUTHOR,PRICE,ISBN,DESCRIPTION,AVAILABILITY) VALUES (?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO BOOKS(BID,BOOKNAME,AUTHOR,PRICE,ISBN,DESCRIPTION,AVAILABILITY,VERSION,QUANTITY) VALUES (?,?,?,?,?,?,?,?,?)";
         PreparedStatement prepareStatement = connection.prepareStatement(sql);
         prepareStatement.setString(1, bModel.getbId());
         prepareStatement.setString(2, bModel.getBookName());
@@ -31,6 +31,8 @@ public class BookController {
         prepareStatement.setString(5, bModel.getIsbn());
         prepareStatement.setString(6, bModel.getDescription());
         prepareStatement.setString(7, bModel.getAvailability());
+        prepareStatement.setString(8, bModel.getVersion());
+        prepareStatement.setString(9, bModel.getQuantity());
 
         return prepareStatement.executeUpdate() > 0;
 
@@ -43,7 +45,8 @@ public class BookController {
         ResultSet rst = createStatement.executeQuery(sql);
         if (rst.next()) {
             BookModel objBookModel = new BookModel(rst.getString("BID"), rst.getString("BOOKNAME"),
-                    rst.getString("AUTHOR"), rst.getString("PRICE"), rst.getString("ISBN"), rst.getString("DESCRIPTION"), rst.getString("AVAILABILITY"));
+                    rst.getString("AUTHOR"), rst.getString("PRICE"), rst.getString("ISBN"), rst.getString("DESCRIPTION"), rst.getString("AVAILABILITY"),
+                    rst.getString("VERSION"), rst.getString("QUANTITY"));
             return objBookModel;
         } else {
             return null;
@@ -57,7 +60,8 @@ public class BookController {
         ResultSet rst = createStatement.executeQuery(sql);
         if (rst.next()) {
             BookModel objBookModel = new BookModel(rst.getString("BID"), rst.getString("BOOKNAME"),
-                    rst.getString("AUTHOR"), rst.getString("PRICE"), rst.getString("ISBN"), rst.getString("DESCRIPTION"), rst.getString("AVAILABILITY"));
+                    rst.getString("AUTHOR"), rst.getString("PRICE"), rst.getString("ISBN"), rst.getString("DESCRIPTION"), rst.getString("AVAILABILITY"),
+                    rst.getString("VERSION"), rst.getString("QUANTITY"));
             return objBookModel;
         } else {
             return null;
@@ -79,22 +83,27 @@ public class BookController {
         }
     }
 
-    public static String updateBookByISBN(String ISBN) throws ClassNotFoundException, SQLException {
+    public static boolean updateBookByISBN(BookModel bModel) throws ClassNotFoundException, SQLException {
         Connection connection = DBConnection.getDBConnection().getConnection();
-        String sql = "UPDATE0. INTO BOOKS(BID,BOOKNAME,AUTHOR,PRICE,ISBN,DESCRIPTION,AVAILABILITY) VALUES (?,?,?,?,?,?,?)";
-        Statement createstatement = connection.createStatement();
-        ResultSet rst = createstatement.executeQuery(sql);
-        if (rst.next()) {
-            sql = "DELETE * FROM BOOKS WHERE ISBN = '" + ISBN + "'";
-            createstatement.executeQuery(sql);
-            createstatement.executeUpdate(sql);
-            return "Successfully deleted the book";
-        } else {
-            return "No records found for the given ISBN";
-        }
+        String sql = "UPDATE  BOOKS SET BOOKNAME = ?, AUTHOR =?, PRICE =?,ISBN=?,DESCRIPTION =?, AVAILABILITY =?, QUANTITY = ?, VERSION =?"
+                + " WHERE BID = ?";
+        PreparedStatement prepareStatement = connection.prepareStatement(sql);
+
+        prepareStatement.setString(1, bModel.getBookName());
+        prepareStatement.setString(2, bModel.getAuthor());
+        prepareStatement.setString(3, bModel.getPrice());
+        prepareStatement.setString(4, bModel.getIsbn());
+        prepareStatement.setString(5, bModel.getDescription());
+        prepareStatement.setString(6, bModel.getAvailability());
+        prepareStatement.setString(7, bModel.getQuantity());
+        prepareStatement.setString(8, bModel.getVersion());
+        prepareStatement.setString(9, bModel.getbId());
+
+        return prepareStatement.executeUpdate() > 0;
+
     }
 
-    public static String autoOrderId() throws ClassNotFoundException, SQLException {
+    public static String autoGenerateBookID() throws ClassNotFoundException, SQLException {
 
         String BID = null;
         String sql = "SELECT BID  FROM BOOKS ORDER BY BID DESC";
@@ -119,6 +128,19 @@ public class BookController {
             }
         } else {
             return "B001";
+        }
+
+    }
+
+    public static ResultSet loadTable(String Query) throws ClassNotFoundException, SQLException {
+
+        Connection connection = DBConnection.getDBConnection().getConnection();
+        Statement stmt = connection.createStatement();
+        ResultSet bookTable = stmt.executeQuery(Query);
+        if (bookTable.next() == true) {
+            return bookTable;
+        } else {
+            return null;
         }
 
     }

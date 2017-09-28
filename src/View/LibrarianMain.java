@@ -5,24 +5,31 @@
  */
 package View;
 
+import Controller.BookController;
+import Model.BookModel;
 import java.awt.Color;
 import static java.lang.Thread.sleep;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import net.proteanit.sql.DbUtils;
 
 /**
  *
  * @author rpa06
  */
-public class LibraryMain extends javax.swing.JFrame {
+public class LibrarianMain extends javax.swing.JFrame {
 
     /**
      * Creates new form LibraryMain
      */
     static String USER;
 
-    public LibraryMain(String userName) {
+    public LibrarianMain(String userName) {
         initComponents();
 
         USER = userName;
@@ -141,7 +148,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jTextFieldISBN1 = new javax.swing.JTextField();
         jTextFieldBookName1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblBookData = new javax.swing.JTable();
         jButtonSearchBook = new javax.swing.JButton();
         jButtonSearchBook1 = new javax.swing.JButton();
         jPanelReserveBookTab = new javax.swing.JPanel();
@@ -153,6 +160,17 @@ public class LibraryMain extends javax.swing.JFrame {
         jTextFieldAuthor = new javax.swing.JTextField();
         jTextFieldReserveBookName = new javax.swing.JTextField();
         jButtonConfirmReservation = new javax.swing.JButton();
+        jPanelAddBook = new javax.swing.JPanel();
+        tfBID = new javax.swing.JTextField();
+        tfVersion = new javax.swing.JTextField();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        tfDescription = new javax.swing.JTextArea();
+        tfAuthorName = new javax.swing.JTextField();
+        tfQty = new javax.swing.JTextField();
+        jButtonConfirmReservation2 = new javax.swing.JButton();
+        tfBookName = new javax.swing.JTextField();
+        tfPrice = new javax.swing.JTextField();
+        tfISBN = new javax.swing.JTextField();
         jPanelRequestedBookList = new javax.swing.JPanel();
         jTabbedPaneRequestedList = new javax.swing.JTabbedPane();
         jPanelRequestedList = new javax.swing.JPanel();
@@ -416,6 +434,11 @@ public class LibraryMain extends javax.swing.JFrame {
         jTabbedPaneReserveBook.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPaneReserveBook.setFocusable(false);
         jTabbedPaneReserveBook.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTabbedPaneReserveBook.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTabbedPaneReserveBookMouseClicked(evt);
+            }
+        });
 
         jPanelSearchBookTab.setBackground(new java.awt.Color(255, 255, 255));
         jPanelSearchBookTab.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -432,7 +455,7 @@ public class LibraryMain extends javax.swing.JFrame {
         jTextFieldBookName1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)), "Name of the Book"));
         jPanelSearchBookTab.add(jTextFieldBookName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 200, 40));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblBookData.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -443,7 +466,7 @@ public class LibraryMain extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblBookData);
 
         jPanelSearchBookTab.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 750, 320));
 
@@ -510,6 +533,73 @@ public class LibraryMain extends javax.swing.JFrame {
         jPanelReserveBookTab.add(jButtonConfirmReservation, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 450, 100, 30));
 
         jTabbedPaneReserveBook.addTab("Reserve Book", jPanelReserveBookTab);
+
+        jPanelAddBook.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelAddBook.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tfBID.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        tfBID.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)), "Book ID"));
+        jPanelAddBook.add(tfBID, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 200, 40));
+
+        tfVersion.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        tfVersion.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)), "Version"));
+        jPanelAddBook.add(tfVersion, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 200, 40));
+
+        jScrollPane9.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)), "Description"));
+
+        tfDescription.setColumns(20);
+        tfDescription.setRows(6);
+        jScrollPane9.setViewportView(tfDescription);
+
+        jPanelAddBook.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 520, 140));
+
+        tfAuthorName.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        tfAuthorName.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)), "Author Name"));
+        jPanelAddBook.add(tfAuthorName, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 60, 200, 40));
+
+        tfQty.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        tfQty.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)), "Quantity"));
+        tfQty.setName(""); // NOI18N
+        tfQty.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfQtyActionPerformed(evt);
+            }
+        });
+        jPanelAddBook.add(tfQty, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, 200, 40));
+
+        jButtonConfirmReservation2.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonConfirmReservation2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jButtonConfirmReservation2.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonConfirmReservation2.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\reservebtn.png")); // NOI18N
+        jButtonConfirmReservation2.setText("Confirm");
+        jButtonConfirmReservation2.setFocusable(false);
+        jButtonConfirmReservation2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButtonConfirmReservation2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConfirmReservation2ActionPerformed(evt);
+            }
+        });
+        jPanelAddBook.add(jButtonConfirmReservation2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 500, 100, 30));
+
+        tfBookName.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        tfBookName.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)), "Book Name"));
+        jPanelAddBook.add(tfBookName, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 200, 40));
+
+        tfPrice.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        tfPrice.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)), "Price"));
+        tfPrice.setName(""); // NOI18N
+        tfPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfPriceActionPerformed(evt);
+            }
+        });
+        jPanelAddBook.add(tfPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 130, 200, 40));
+
+        tfISBN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        tfISBN.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)), "Book ISBN"));
+        jPanelAddBook.add(tfISBN, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 200, 40));
+
+        jTabbedPaneReserveBook.addTab("Add Book", jPanelAddBook);
 
         jPanelReserveBook.add(jTabbedPaneReserveBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 570));
 
@@ -902,8 +992,21 @@ public class LibraryMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonSettings11MouseExited
 
     private void jButtonReserveBookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReserveBookActionPerformed
-        // TODO add your handling code here:
         togglePanels("ReserveBook");
+        try {
+            // TODO add your handling code here:
+
+            ResultSet tableData = BookController.loadTable("SELECT * FROM BOOKS");
+            if (tableData != null) {
+                tblBookData.setModel(DbUtils.resultSetToTableModel(tableData));
+            } else {
+            }
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(LibrarianMain.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(LibrarianMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }//GEN-LAST:event_jButtonReserveBookActionPerformed
 
     private void jButtonRequestedBookListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRequestedBookListActionPerformed
@@ -942,6 +1045,80 @@ public class LibraryMain extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonLogoutActionPerformed
 
+    private void jTabbedPaneReserveBookMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPaneReserveBookMouseClicked
+        // TODO add your handling code here:
+        try {
+            tfBID.setText(BookController.autoGenerateBookID());
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(LibrarianMain.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(LibrarianMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
+    }//GEN-LAST:event_jTabbedPaneReserveBookMouseClicked
+
+    private void jButtonConfirmReservation2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfirmReservation2ActionPerformed
+
+        String Description;
+        if (!tfBookName.getText().isEmpty() && tfBookName.getText().length() <= 30) {
+            if (Validation.Validation.isLetters(tfAuthorName.getText())) {
+                if (Validation.Validation.isISBN(tfISBN.getText())) {
+                    if (!tfVersion.getText().isEmpty()) {
+                        if (Validation.Validation.isNumbers(tfQty.getText())) {
+
+                            if (Validation.Validation.isDouble(tfPrice.getText())) {
+
+                                if (tfDescription.getText().isEmpty()) {
+                                    Description = "A description is can not be found for the given book";
+                                } else {
+                                    Description = tfDescription.getText();
+                                }
+
+                                try {
+                                    if (BookController.addBook(new BookModel(tfBID.getText(), tfBookName.getText(), tfAuthorName.getText(), tfQty.getText(), tfVersion.getText(), Description, "Yes", tfVersion.getText(), tfQty.getText()))) {
+                                        JOptionPane.showMessageDialog(rootPane, "Successfully added", "Success!", JOptionPane.PLAIN_MESSAGE);
+                                    } else {
+                                        JOptionPane.showMessageDialog(rootPane, "Error occured while inserting", "Error!", JOptionPane.ERROR_MESSAGE);
+                                    }
+
+                                } catch (ClassNotFoundException | SQLException ex) {
+                                    Logger.getLogger(LibrarianMain.class.getName()).log(Level.SEVERE, null, ex);
+                                }
+
+                            } else {
+                                JOptionPane.showMessageDialog(rootPane, "Invalid price", "Error!", JOptionPane.ERROR_MESSAGE);
+                            }
+
+                        } else {
+                            JOptionPane.showMessageDialog(rootPane, "Invalid quantity", "Error!", JOptionPane.ERROR_MESSAGE);
+                        }
+                    } else {
+                        JOptionPane.showMessageDialog(rootPane, "Version number can't be empty", "Error!", JOptionPane.ERROR_MESSAGE);
+                    }
+
+                } else {
+                    JOptionPane.showMessageDialog(rootPane, "Invalid ISBN", "Error!", JOptionPane.ERROR_MESSAGE);
+                }
+
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Invalid author name", "Error!", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Invalid book name", "Error!", JOptionPane.ERROR_MESSAGE);
+        }
+
+
+    }//GEN-LAST:event_jButtonConfirmReservation2ActionPerformed
+
+    private void tfQtyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfQtyActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfQtyActionPerformed
+
+    private void tfPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPriceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfPriceActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -959,20 +1136,23 @@ public class LibraryMain extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LibraryMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LibrarianMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LibraryMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LibrarianMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LibraryMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LibrarianMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LibraryMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LibrarianMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LibraryMain(USER).setVisible(true);
+                new LibrarianMain(USER).setVisible(true);
             }
         });
     }
@@ -985,6 +1165,7 @@ public class LibraryMain extends javax.swing.JFrame {
     private javax.swing.JButton jButtonCancelRequest4;
     private javax.swing.JButton jButtonConfirmReservation;
     private javax.swing.JButton jButtonConfirmReservation1;
+    private javax.swing.JButton jButtonConfirmReservation2;
     private javax.swing.JButton jButtonFeedback;
     private javax.swing.JButton jButtonHistory;
     private javax.swing.JButton jButtonLogout;
@@ -998,6 +1179,7 @@ public class LibraryMain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelLogo;
     private javax.swing.JLabel jLabelWelcomeUser;
     private javax.swing.JLabel jLableTime;
+    private javax.swing.JPanel jPanelAddBook;
     private javax.swing.JPanel jPanelButtons;
     private javax.swing.JPanel jPanelEditProfile;
     private javax.swing.JPanel jPanelFeedback;
@@ -1023,13 +1205,13 @@ public class LibraryMain extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPanePendingReturn;
     private javax.swing.JTabbedPane jTabbedPaneRequestedList;
     private javax.swing.JTabbedPane jTabbedPaneReserveBook;
     private javax.swing.JTabbedPane jTabbedPanelFeedback;
     private javax.swing.JTabbedPane jTabbedPanelHistory;
     private javax.swing.JTabbedPane jTabbedPanelHistory1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
@@ -1065,5 +1247,14 @@ public class LibraryMain extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldReserveBookName1;
     private javax.swing.JTextField jTextFieldReserveISBN;
     private javax.swing.JTextField jTextFieldReserveISBN1;
+    private javax.swing.JTable tblBookData;
+    private javax.swing.JTextField tfAuthorName;
+    private javax.swing.JTextField tfBID;
+    private javax.swing.JTextField tfBookName;
+    private javax.swing.JTextArea tfDescription;
+    private javax.swing.JTextField tfISBN;
+    private javax.swing.JTextField tfPrice;
+    private javax.swing.JTextField tfQty;
+    private javax.swing.JTextField tfVersion;
     // End of variables declaration//GEN-END:variables
 }
