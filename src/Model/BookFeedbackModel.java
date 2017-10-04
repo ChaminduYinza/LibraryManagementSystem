@@ -11,18 +11,14 @@ package Model;
  */
 public class BookFeedbackModel {
 
-    String fId;
-    String bId;
-    String feedback;
-    String fullName;
-    String isbn;
+    String fId,bId,feedback,fullName;
 
-    public BookFeedbackModel(String fId, String bId, String feedback, String fullName, String isbn) {
+    public BookFeedbackModel(String fId, String bId, String feedback, String fullName) {
         this.fId = fId;
         this.bId = bId;
         this.feedback = feedback;
         this.fullName = fullName;
-        this.isbn = isbn;
+        
     }
 
     public String getfId() {
@@ -41,10 +37,6 @@ public class BookFeedbackModel {
         return fullName;
     }
 
-    public String getIsbn() {
-        return isbn;
-    }
-
     public void setfId(String fId) {
         this.fId = fId;
     }
@@ -61,8 +53,5 @@ public class BookFeedbackModel {
         this.fullName = fullName;
     }
 
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
 
 }

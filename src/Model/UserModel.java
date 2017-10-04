@@ -11,18 +11,7 @@ package Model;
  */
 public class UserModel {
     
-    String uId;
-    String password;
-    String firstName;
-    String lastName;
-    String nic;
-    String dob;
-    String address;
-    String contact;
-    String email;
-    String userType;
-    String regDate;
-    String expiryDate;
+    String uId,password,firstName,lastName,nic,dob,address,contact,email,userType,regDate,expiryDate;
 
     public UserModel(String Uid, String password, String firstName, String lastName, String nic, String dob, String address, String contact, String email, String userType, String regDate, String expiryDate) {
         this.uId = Uid;
