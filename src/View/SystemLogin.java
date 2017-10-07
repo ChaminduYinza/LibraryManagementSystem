@@ -6,8 +6,8 @@
 package View;
 
 import static Controller.UserController.login;
-import static Controller.UserController.validateEmail;
 import Model.UserModel;
+import static Validation.Validation.validateEmail;
 import java.awt.Color;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -149,10 +149,7 @@ public class SystemLogin extends javax.swing.JFrame {
 
     private void jButtonUserLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUserLoginActionPerformed
         // TODO add your handling code here:
-//viewLoginFrame(false);
-//LibraryMain member=new LibraryMain("Sameera Madushan");
-//member.setVisible(true);
-//this.dispose();
+
         UserModel user = new UserModel();
         user.setEmail(jTextFieldEmail.getText());
         user.setPassword(jPasswordFieldUserPassword.getText());
