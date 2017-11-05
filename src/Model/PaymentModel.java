@@ -11,26 +11,26 @@ package Model;
  */
 public class PaymentModel {
 
-    String pId;
-    String uId;
+    String pid;
+    String uid;
     String paymentType;
     Double amount;
     int noOfDays;
 
     public PaymentModel(String pId, String uId, String paymentType, Double amount, int noOfDays) {
-        this.pId = pId;
-        this.uId = uId;
+        this.pid = pId;
+        this.uid = uId;
         this.paymentType = paymentType;
         this.amount = amount;
         this.noOfDays = noOfDays;
     }
 
     public String getpId() {
-        return pId;
+        return pid;
     }
 
     public String getuId() {
-        return uId;
+        return uid;
     }
 
     public String getPaymentType() {
@@ -46,11 +46,11 @@ public class PaymentModel {
     }
 
     public void setpId(String pId) {
-        this.pId = pId;
+        this.pid = pId;
     }
 
     public void setuId(String uId) {
-        this.uId = uId;
+        this.uid = uId;
     }
 
     public void setPaymentType(String paymentType) {

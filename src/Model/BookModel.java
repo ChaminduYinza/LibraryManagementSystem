@@ -12,7 +12,7 @@ package Model;
 public class BookModel {
     
     
-    String bId ;
+    String bid ;
     String bookName;
     String author;
     String price;
@@ -22,8 +22,8 @@ public class BookModel {
     String version;
     String quantity;
 
-    public BookModel(String bId, String bookName, String author, String price, String isbn, String description, String availability, String version, String quantity) {
-        this.bId = bId;
+    public BookModel(String bid, String bookName, String author, String price, String isbn, String description, String availability, String version, String quantity) {
+        this.bid = bid;
         this.bookName = bookName;
         this.author = author;
         this.price = price;
@@ -53,11 +53,11 @@ public class BookModel {
    
     
     public String getbId() {
-        return bId;
+        return bid;
     }
 
     public void setbId(String bId) {
-        this.bId = bId;
+        this.bid = bId;
     }
 
     public String getBookName() {

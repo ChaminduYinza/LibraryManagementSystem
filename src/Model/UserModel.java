@@ -11,9 +11,11 @@ package Model;
  */
 public class UserModel {
     
-    String uId,password,firstName,lastName,nic,dob,address,contact,email,userType,regDate,expiryDate;
+    String uId,password,firstName,lastName,nic,dob,address,contact,email,userType,maxBook,borrowedBook,regDate,expiryDate;
 
-    public UserModel(String Uid, String password, String firstName, String lastName, String nic, String dob, String address, String contact, String email, String userType, String regDate, String expiryDate) {
+    public UserModel(String Uid, String password, String firstName, String lastName,
+            String nic, String dob, String address, String contact, String email, 
+            String userType,String maxBook, String borrowedBook, String regDate, String expiryDate) {
         this.uId = Uid;
         this.password = password;
         this.firstName = firstName;
@@ -24,6 +26,8 @@ public class UserModel {
         this.contact = contact;
         this.email = email;
         this.userType = userType;
+        this.maxBook = maxBook;
+        this.borrowedBook = borrowedBook;
         this.regDate = regDate;
         this.expiryDate = expiryDate;
     }
@@ -32,6 +36,14 @@ public class UserModel {
         
     }
 
+    public String getMaxBook() {
+        return maxBook;
+    }
+    
+    public String getBorrowedBook() {
+        return borrowedBook;
+    }
+    
     public String getUid() {
         return uId;
     }
@@ -128,6 +140,13 @@ public class UserModel {
         this.expiryDate = expiryDate;
     }
     
+    public void setMaxBook(String maxBook) {
+        this.maxBook = maxBook;
+    }
+    
+    public void setBorrowedBook(String borrowedBook) {
+        this.borrowedBook = borrowedBook;
+    }
     
     
 }

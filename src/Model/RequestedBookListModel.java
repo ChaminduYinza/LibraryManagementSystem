@@ -11,28 +11,28 @@ package Model;
  */
 public class RequestedBookListModel {
 
-    String rId;
-    String uId;
-    String bId;
+    String rid;
+    String uid;
+    String bid;
     String bookName;
 
     public RequestedBookListModel(String rId, String uId, String bId, String bookName) {
-        this.rId = rId;
-        this.uId = uId;
-        this.bId = bId;
+        this.rid = rId;
+        this.uid = uId;
+        this.bid = bId;
         this.bookName = bookName;
     }
 
     public String getrId() {
-        return rId;
+        return rid;
     }
 
     public String getuId() {
-        return uId;
+        return uid;
     }
 
     public String getbId() {
-        return bId;
+        return bid;
     }
 
     public String getBookName() {
@@ -40,15 +40,15 @@ public class RequestedBookListModel {
     }
 
     public void setrId(String rId) {
-        this.rId = rId;
+        this.rid = rId;
     }
 
     public void setuId(String uId) {
-        this.uId = uId;
+        this.uid = uId;
     }
 
     public void setbId(String bId) {
-        this.bId = bId;
+        this.bid = bId;
     }
 
     public void setBookName(String bookName) {

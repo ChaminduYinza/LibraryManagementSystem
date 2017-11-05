@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<root>
+    <!--Feedback Controller-->
+    <query key="AddFeedbackInsert">
+        <entry>INSERT INTO BOOKFEEDBACKS(FID,BID,FEEDBACK,ISAPPROVED,FULLNAME) VALUES (?,?,?,?,?)</entry>
+    </query>
+    <query key="FeedbackAutoGenIDSelect">
+        <entry>SELECT FID FROM BOOKFEEDBACKS ORDER BY FID DESC LIMIT 1</entry>
+    </query>
+    <query key="GetAllFeedBacks">
+        <entry>SELECT * FROM BOOKFEEDBACKS</entry>
+    </query>
+    <query key="DeleteFeedBackByFID">
+        <entry>SELECT * FROM BOOKFEEDBACKS WHERE FID = ?</entry>
+    </query>
+    <!--Requested Book Controller-->
+    <query key="AddBookRequestByMember">
+        <entry>INSERT INTO REQUESTED_BOOK_LIST (RID, UID, BID, BOOKNAME) VALUES (?,?,?,?)</entry>
+    </query>
+    <query key="SelectQuantityByMember">
+        <entry>SELECT QUANTITY FROM BOOKS WHERE BID = ?</entry>
+    </query>
+    <query key="UpdateQuantityByMember">
+        <entry>UPDATE BOOKS SET QUANTITY = ? WHERE BID = ?</entry>
+    </query>
+    <query key="SelectAutoGenRequestedBookID">
+        <entry>SELECT RID FROM REQUESTED_BOOK_LIST ORDER BY RID DESC LIMIT 1</entry>
+    </query>
+    <query key="DeleteBookRequestByMember">
+        <entry>DELETE FROM REQUESTED_BOOK_LIST WHERE RID = ? AND UID = ? AND BID = ?</entry>
+    </query>
+    
+    <!--Suggestion Controller-->
+    <query key="SelectSuggestionUotoGenID">
+        <entry>SELECT SID FROM SUGGESTIONS ORDER BY SID DESC LIMIT 1</entry>
+    </query>
+    <query key="InsertSuggestions">
+        <entry>INSERT INTO SUGGESTIONS(SID,UID,SUGGESTION) VALUES (?,?,?)</entry>
+    </query>
+    
+    <!--User Controller-->
+    <query key="SelectLoginUserDetails">
+        <entry>SELECT * FROM USERS WHERE email = ? AND password = ?</entry>
+    </query>
+    <query key="SelectForPasswordChange">
+        <entry>SELECT * FROM USERS WHERE UID = ? AND PASSWORD = ?</entry>
+    </query>
+    <query key="UpdateUserPassword">
+        <entry>UPDATE USERS SET PASSWORD = ? WHERE UID = ?</entry>
+    </query>
+    <query key="AddUser">
+        <entry>INSERT INTO USERS(UID,USERTYPE,FIRSTNAME,LASTNAME,NIC,DOB,ADDRESS,CONTACT,EMAIL,PASSWORD,REGDATE,EXPIRYDATE) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)</entry>
+    </query>
+    <query key="SelectAllUsers">
+        <entry>SELECT * FROM USERS</entry>
+    </query>
+    <query key="SelectSingleUser">
+        <entry>SELECT * FROM USERS WHERE UID = ?</entry>
+    </query>
+    <query key="UpdateUser">
+        <entry>UPDATE USERS SET CONTACT = ? WHERE UID = ?</entry>
+    </query>
+    <query key="updateMaxBookCount">
+        <entry>UPDATE USERS SET MAXIMUMBOOKCOUNT = ? WHERE UID = ?</entry>
+    </query>
+
+        
+                	
+    <!--Book Controller-->
+    <!--Issue Book-->
+    <query key="SelectUsersByUID">
+        <entry>SELECT UID,MAXIMUMBOOKCOUNT,BORROWEDBOOKCOUNT FROM USERS WHERE UID = ?</entry>
+    </query>
+	
+    <query key="UpdateUserBorrowedCount">
+        <entry>UPDATE USERS SET BORROWEDBOOKCOUNT = ?</entry>
+    </query>
+    <query key="InsertBorrowedBooks">
+        <entry>INSERT INTO BORROWEDBOOKS(BBID,UID,BID,RENEWDATE,ISSUEDATE) VALUES (?,?,?,?,?)</entry>
+    </query>
+    <query key="UpdateBookQuantity">
+        <entry>UPDATE BOOKS SET QUANTITY = ? WHERE BID = ?</entry>
+    </query>
+    <!--Add Book-->
+    <query key="SelectQTYByISBN">
+        <entry>SELECT ISBN,QUANTITY FROM BOOKS WHERE ISBN = ?</entry>
+    </query>	
+    <query key="UpdateBooks">
+        <entry>UPDATE BOOKS SET QUANTITY = ? WHERE ISBN = ?</entry>
+    </query>		
+    <query key="InsertIntoBooks">
+        <entry>INSERT INTO BOOKS(BID,BOOKNAME,AUTHOR,PRICE,ISBN,DESCRIPTION,AVAILABILITY,VERSION,QUANTITY) VALUES (?,?,?,?,?,?,?,?,?)</entry>
+    </query>
+    <!--Search Book-->
+    <query key="SearchBookByBID">
+        <entry>SELECT * FROM BOOKS WHERE BID LIKE ?</entry>
+    </query>	
+    <!--Delete Book-->
+    <query key="UpdateBookAvailability">
+        <entry>UPDATE BOOKS SET AVAILABILITY = 'NO' WHERE ISBN = ?</entry>
+    </query>	
+    <!--Delete Borrowed Books-->
+    <query key="DeleteBorrowedByBBID">
+        <entry>DELETE  FROM BORROWEDBOOKS WHERE BBID = ?</entry>
+    </query>
+    <query key="UpdateBooksByBID">
+        <entry>UPDATE BOOKS SET QUANTITY = ? WHERE BID = ?</entry>
+    </query>
+    <query key="SelectBorrowedCount">
+        <entry>SELECT BORROWEDBOOKCOUNT FROM USERS WHERE UID = ?</entry>
+    </query>
+    <query key="UpdateBorrowedCount">
+        <entry>UPDATE USERS SET BORROWEDBOOKCOUNT = ? WHERE UID = ?</entry>
+    </query>
+
+    <!--Update Book-->
+    <query key="UpdateBookByISBN">
+        <entry>UPDATE  BOOKS SET BOOKNAME = ?, AUTHOR =?, PRICE =?,DESCRIPTION =?, AVAILABILITY =?, QUANTITY = ?, VERSION =? WHERE ISBN = ?</entry>
+    </query>
+    <!--Auto Generate Book ID-->
+    <query key="AutoGenerateBookID">
+        <entry>SELECT BID  FROM BOOKS ORDER BY BID DESC</entry>
+    </query>
+    <!--Auto Borrowed Book ID-->
+    <query key="AutoGenerateBorrowedID">
+        <entry>SELECT BBID  FROM BORROWEDBOOKS ORDER BY BBID DESC</entry>
+    </query>
+    <!--Delete Book Feedback By FID-->
+    <query key="DeleteBookFeedbacksByFID">
+        <entry>DELETE FROM BOOKFEEDBACKS WHERE FID = ?</entry>
+    </query>
+    <!--Approve Book Feedback By FID-->
+    <query key="ApproveBookFeedBack">
+        <entry>UPDATE BOOKFEEDBACKS SET ISAPPROVED = '1' WHERE FID = ?</entry>
+    </query>
+    <!--Approve Book Feedback By FID-->
+    <query key="UpdateBorrowedBook">
+        <entry>UPDATE BORROWEDBOOKS SET RENEWDATE = ?,ISSUBBMITTED = ? WHERE BBID = ?</entry>
+    </query>
+    <!--WarnedList Controller-->
+    <!--AutoGenerate Warned List ID-->
+    <query key="AutoGenerateWarnedListID">
+        <entry>SELECT WID  FROM  WARNEDLIST ORDER BY WID DESC</entry>
+    </query>
+	
+    <!--Add To Warned List-->
+    <query key="AddToWarnedList">
+        <entry>INSERT INTO WARNEDLIST VALUES (?,?,?,?,?)</entry>
+    </query>
+	
+    <!--Supplier Controller-->
+    <!--Add Supplier-->
+    <query key="AddSupplier">
+        <entry>INSERT INTO SUPPLIERS VALUES (?,?,?,?)</entry>
+    </query>
+    <!--Get Supplier By SID-->
+    <query key="GetSupplierBySID">
+        <entry>SELECT * FROM SUPPLIERS WHERE SID = ? </entry>
+    </query>
+    <!--Get Supplier By SID-->
+    <query key="DeleteSupplier">
+        <entry>DELETE FROM SUPPLIERS WHERE SID = ? </entry>
+    </query>
+    <!--Edit Supplier -->
+    <query key="EditSupplier">
+        <entry>UPDATE SUPPLIERS SET COMPANY = ?, ADDRESS = ?, MOBILE = ? WHERE SID = ? </entry>
+    </query>
+	
+    <!--Auto Generate Supplier ID -->
+    <query key="AutoGenerateSupplierID">
+        <entry>SELECT SID FROM SUPPLIERS ORDER BY SID DESC </entry>
+    </query>
+    
+    
+    <!--Fines -->
+    <!--Add to fines-->
+    <query key="AddToFine">
+        <entry>INSERT INTO FINES VALUES (?,?,?,?,?) </entry>
+    </query>
+    <query key="AutoGenerateFineID">
+        <entry>SELECT FID  FROM FINES ORDER BY FID DESC</entry>
+    </query>
+	
+	
+	
+	
+		
+</root>

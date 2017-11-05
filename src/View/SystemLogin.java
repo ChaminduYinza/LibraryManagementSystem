@@ -7,8 +7,10 @@ package View;
 
 import static Controller.UserController.login;
 import Model.UserModel;
+import Util.Config;
 import static Validation.Validation.validateEmail;
 import java.awt.Color;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -20,7 +22,8 @@ import javax.swing.JOptionPane;
  */
 public class SystemLogin extends javax.swing.JFrame {
 
-
+    
+    public static final org.apache.log4j.Logger LOG = Config.getLogger(SystemLogin.class);
     public SystemLogin() {
         initComponents();
         this.setLocationRelativeTo(null); //Setting to display in the center of screen
@@ -158,35 +161,47 @@ public class SystemLogin extends javax.swing.JFrame {
             if (user.getPassword().isEmpty()) {
                 JOptionPane.showMessageDialog(rootPane, "Please enter Password!",
                         "Oops!", JOptionPane.ERROR_MESSAGE);
-                
+
             } else {
                 try {
-                    String userType = login(user);
-                    if (userType.equals("Librarian")) {
-                        //view UI of Librarian
-
-                    } else if (userType.equals("Library Manager")) {
-                        //view UI of Library Manager 
-
-                    } else if (userType.equals("Member")) {
-                        //view UI of Member
-                        System.out.println("Logged in successfully");
-                        //set visibility of login and library member
-                        viewLoginFrame(false);
-                        MemberMain member=new MemberMain(user.getEmail());
-                        member.setVisible(true);
-                        this.dispose();
-
-                    } else if (userType.isEmpty()) {
+                    UserModel userAndID = login(user);
+                    
+                    if (userAndID == null) {
                         System.out.println("Login Fail");
                         JOptionPane.showMessageDialog(rootPane, "Email or Password "
                                 + "Incorrect!", "Oops!", JOptionPane.ERROR_MESSAGE);
+                        LOG.info("Invalid loggin attempt by user");
 
                     }
-                } catch (ClassNotFoundException ex) {
-                    Logger.getLogger(SystemLogin.class.getName()).log(Level.SEVERE, null, ex);
+                    else if (userAndID.getUserType().equals("Librarian")) {
+                        //view UI of Librarian
+                        //set visibility of login and library member
+                        viewLoginFrame(false);
+                        LibrarianMain librarian = new LibrarianMain(user.getEmail(), userAndID.getUid());
+                        librarian.setVisible(true);
+                        this.dispose();
+                        LOG.info("User : "+userAndID.getUid()+" successfully logged in to the system");
 
-                } catch (SQLException ex) {
+                    } else if (userAndID.getUserType().equals("Library Manager")) {
+                        //view UI of Library Manager 
+                        //set visibility of login and library member
+                        viewLoginFrame(false);
+                        LibraryManagerMain libraryManager = new LibraryManagerMain(user.getEmail());
+                        libraryManager.setVisible(true);
+                        this.dispose();
+                        LOG.info("User : "+userAndID.getUid()+" successfully logged in to the system");
+
+                    } else if (userAndID.getUserType().equals("Member")) {
+                        //view UI of Member
+                        //set visibility of login and library member
+                        viewLoginFrame(false);
+                        MemberMain member = new MemberMain(user.getEmail(), userAndID.getUid());
+                        member.setVisible(true);
+                        this.dispose();
+                        LOG.info("User : "+userAndID.getUid()+" successfully logged in to the system");
+                    }
+                } catch (ClassNotFoundException | SQLException | IOException ex) {
+                    LOG.error("Loggin attemt fail due to exception\n"+ ex);
                     Logger.getLogger(SystemLogin.class.getName()).log(Level.SEVERE, null, ex);
 
                 }
@@ -194,7 +209,7 @@ public class SystemLogin extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(rootPane, "Please enter valid Email "
                     + "address!", "Oops!", JOptionPane.ERROR_MESSAGE);
-
+            LOG.error("Loggin attemt fail due to invalid username or password\n");
         }
 
     }//GEN-LAST:event_jButtonUserLoginActionPerformed
@@ -237,7 +252,7 @@ public class SystemLogin extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(SystemLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-      
+
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {

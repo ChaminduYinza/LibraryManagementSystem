@@ -5,8 +5,10 @@
  */
 package Controller;
 
-import DBConnection.DBConnection;
+import Util.DBConnection;
 import Model.UserModel;
+import Util.Config;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,39 +26,77 @@ import javax.naming.spi.DirStateFactory;
 public class UserController {
 
     static Connection connection;
-    
-    
 
-    public UserController(){
-
+    public UserController() {
 
     }
 
-    public static String login(UserModel userModel) throws
-            ClassNotFoundException, SQLException {
-
-        String sql = "SELECT * FROM USERS WHERE email = '" + userModel.getEmail()
-                + "' AND password = '" + userModel.getPassword() + "'";
-
+    //this method will validate ligin
+    public static UserModel login(UserModel userModel) throws
+            ClassNotFoundException, SQLException, IOException {
+        Connection connection = DBConnection.getDBConnection().getConnection();
+        String sql = Config.getXMLData("query", "SelectLoginUserDetails");
         PreparedStatement prepareStatement = connection.prepareStatement(sql);
+        prepareStatement.setString(1, userModel.getEmail());
+        prepareStatement.setString(2, userModel.getPassword());
+
         ResultSet result = prepareStatement.executeQuery();
         String email = "email";
         String password = "password";
-        String userType = "userType";
+        UserModel userAndID = new UserModel();
 
         if (result.next()) {
             if (userModel.getEmail().equals(result.getString(email))
                     && userModel.getPassword().equals(result.getString(password))) {
-                return result.getString(userType);
+                userAndID.setUserType(result.getString("USERTYPE"));
+                userAndID.setUid(result.getString("UID"));
+                return userAndID;
             }
         }
 
-        return "";
+        return null;
     }
 
-    public static boolean addUser(UserModel uModel) throws ClassNotFoundException, SQLException {
+    //this method will check current password with entered password when changing the password
+    public static boolean checkPasswordforReset(UserModel userModel) throws
+            ClassNotFoundException, SQLException, IOException {
+        Connection connection = DBConnection.getDBConnection().getConnection();
+        String sql = Config.getXMLData("query", "SelectForPasswordChange");
 
-        String sql = "INSERT INTO USERS(UID,USERTYPE,FIRSTNAME,LASTNAME,NIC,DOB,ADDRESS,CONTACT,EMAIL,PASSWORD,REGDATE,EXPIRYDATE) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+        PreparedStatement prepareStatement = connection.prepareStatement(sql);
+        prepareStatement.setString(1, userModel.getUid());
+        prepareStatement.setString(2, userModel.getPassword());
+
+        ResultSet result = prepareStatement.executeQuery();
+        String uID = "UID";
+        String password = "PASSWORD";
+
+        if (result.next()) {
+            if (userModel.getUid().equals(result.getString(uID))
+                    && userModel.getPassword().equals(result.getString(password))) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+    
+    //this method will update new password
+    public static boolean updatePassword(String uID, String password) 
+            throws ClassNotFoundException, SQLException, IOException {
+        Connection connection = DBConnection.getDBConnection().getConnection();
+        String sql = Config.getXMLData("query", "UpdateUserPassword");
+        PreparedStatement prepareStatement = connection.prepareStatement(sql);
+        prepareStatement.setString(1, password);
+        prepareStatement.setString(2, uID);
+        return prepareStatement.executeUpdate() > 0;
+    }
+
+    //this method will add user to the system
+    public static boolean addUser(UserModel uModel)
+            throws ClassNotFoundException, SQLException, IOException {
+        Connection connection = DBConnection.getDBConnection().getConnection();
+        String sql = Config.getXMLData("query", "AddUser");
         PreparedStatement preparestatement = connection.prepareStatement(sql);
         preparestatement.setString(1, uModel.getUid());
         preparestatement.setString(2, uModel.getUserType());
@@ -74,9 +114,10 @@ public class UserController {
         return preparestatement.executeUpdate() > 0;
     }
 
-    public static UserModel getAllUsers() throws ClassNotFoundException, SQLException {
-
-        String sql = "SELECT * FROM USERS";
+    //this will return all the users in the system
+    public static UserModel getAllUsers() throws ClassNotFoundException, SQLException, IOException {
+        Connection connection = DBConnection.getDBConnection().getConnection();
+        String sql = Config.getXMLData("query", "SelectAllUsers");
         Statement createstatement = connection.createStatement();
         ResultSet result = createstatement.executeQuery(sql);
 
@@ -87,6 +128,7 @@ public class UserController {
                     result.getString("nic"), result.getString("dob"),
                     result.getString("address"), result.getString("contact"),
                     result.getString("email"), result.getString("userType"),
+                    result.getString("MaximumBookCount"), result.getString("BorrowedBookCount"),
                     result.getString("regDate"), result.getString("expiryDate"));
 
             return objUserModel;
@@ -96,13 +138,48 @@ public class UserController {
 
     }
 
-    public static boolean deleteUser(String UID) throws ClassNotFoundException, SQLException {
+    //this method will return single user by user ID
+    public static UserModel getUser(String uID) throws ClassNotFoundException, SQLException, IOException {
+        Connection connection = DBConnection.getDBConnection().getConnection();
+        String sql = Config.getXMLData("query", "SelectSingleUser");
+        PreparedStatement prepareStatement = connection.prepareStatement(sql);
+        prepareStatement.setString(1, uID);
+        ResultSet result = prepareStatement.executeQuery();
 
-        String sql = "SELECT * FROM USERS WHERE UID = ?";
-        PreparedStatement preparestatement = connection.prepareStatement(sql);
-        preparestatement.setString(1, UID);
+        if (result.next()) {
+            UserModel objUserModel = new UserModel(result.getString("UID"), result.getString("PASSWORD"),
+                    result.getString("FIRSTNAME"), result.getString("LASTNAME"),
+                    result.getString("NIC"), result.getString("DOB"),
+                    result.getString("ADDRESS"), result.getString("CONTACT"),
+                    result.getString("EMAIL"), result.getString("USERTYPE"),
+                    result.getString("MaximumBookCount"), result.getString("BorrowedBookCount"),
+                    result.getString("REGDATE"), result.getString("EXPIRYDATE"));
 
-        return preparestatement.executeUpdate() > 0;
+            return objUserModel;
+        } else {
+            return null;
+        }
+
+    }
+
+    //this method will update user's contact number
+    public static boolean updateUser(String uID, String contact) throws ClassNotFoundException, SQLException, IOException {
+        Connection connection = DBConnection.getDBConnection().getConnection();
+        String sql = Config.getXMLData("query", "UpdateUser");
+        PreparedStatement prepareStatement = connection.prepareStatement(sql);
+        prepareStatement.setString(1, contact);
+        prepareStatement.setString(2, uID);
+        return prepareStatement.executeUpdate() > 0;
+    }
+    
+    //this method will update user's max book count
+    public static boolean updateMaxBookCount(String uID, String maxBookCount) throws ClassNotFoundException, SQLException, IOException {
+        Connection connection = DBConnection.getDBConnection().getConnection();
+        String sql = Config.getXMLData("query", "updateMaxBookCount");
+        PreparedStatement prepareStatement = connection.prepareStatement(sql);
+        prepareStatement.setString(1, maxBookCount);
+        prepareStatement.setString(2, uID);
+        return prepareStatement.executeUpdate() > 0;
     }
 
 }

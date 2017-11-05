@@ -5,6 +5,7 @@
  */
 package Validation;
 
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,7 +21,7 @@ public class Validation {
 
         if (!Paramter.isEmpty()) {
             for (int i = 0; i < Paramter.length(); i++) {
-                if (!Character.isLetter(Paramter.charAt(i))) {
+                if (!Character.isLetter(Paramter.charAt(i)) && !Character.isWhitespace(Paramter.charAt(i))) {
                     return false;
 
                 }
@@ -62,13 +63,20 @@ public class Validation {
         return (!value.isEmpty() && value.matches(DOUBLE_REGEXP));
 
     }
-    
+
     public static final Pattern VALID_EMAIL_ADDRESS_REGEX
             = Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
 
     public static boolean validateEmail(String emailStr) {
         Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(emailStr);
         return matcher.find();
+    }
+
+    public static boolean validRenewDate(Date renewDate) {
+        Date currentDate = new Date();
+
+        return (currentDate.before(renewDate) || currentDate.equals(renewDate));
+
     }
 
 }
