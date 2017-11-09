@@ -71,3 +71,76 @@ INFO    2017-11-04 11:21:06,709 [AWT-EventQueue-0] Util.DBConnection  - Connecte
 INFO    2017-11-04 11:21:06,714 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
 INFO    2017-11-04 11:21:08,317 [AWT-EventQueue-0] View.MemberMain  - Password successfully updated to the database by user: U001
 INFO    2017-11-04 11:21:50,225 [AWT-EventQueue-0] View.MemberMain  - ------User U001 logged out from the system------
+INFO    2017-11-09 12:01:37,684 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-09 12:34:19,379 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-09 12:34:20,783 [AWT-EventQueue-0] Util.Utility  - Fail to sent Email to the sameeradelpechithra@gmail.com
+ERROR   2017-11-09 12:34:20,783 [AWT-EventQueue-0] Util.Utility  - javax.mail.SendFailedException: Sending failed;
+  nested exception is: 
+	javax.mail.MessagingException: 530 5.7.0 Must issue a STARTTLS command first. h186sm10609948pfe.66 - gsmtp
+
+INFO    2017-11-09 12:34:20,783 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+INFO    2017-11-09 12:36:38,269 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-09 12:36:39,611 [AWT-EventQueue-0] Util.Utility  - Fail to sent Email to the sameeradelpechithra@gmail.com
+ERROR   2017-11-09 12:36:39,611 [AWT-EventQueue-0] Util.Utility  - javax.mail.SendFailedException: Sending failed;
+  nested exception is: 
+	javax.mail.MessagingException: 530 5.7.0 Must issue a STARTTLS command first. l1sm10058506pff.77 - gsmtp
+
+INFO    2017-11-09 12:36:39,611 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+INFO    2017-11-09 12:40:19,456 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-09 12:40:20,329 [AWT-EventQueue-0] Util.Utility  - Fail to sent Email to the sameeradelpechithra@gmail.com
+ERROR   2017-11-09 12:40:20,345 [AWT-EventQueue-0] Util.Utility  - javax.mail.SendFailedException: Sending failed;
+  nested exception is: 
+	javax.mail.MessagingException: 530 5.7.0 Must issue a STARTTLS command first. s88sm12335781pfe.36 - gsmtp
+
+INFO    2017-11-09 12:40:20,345 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+INFO    2017-11-09 12:43:15,731 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-09 12:43:50,529 [AWT-EventQueue-0] Util.Utility  - Fail to sent Email to the sameeradelpechithra@gmail.com
+ERROR   2017-11-09 12:43:55,858 [AWT-EventQueue-0] Util.Utility  - javax.mail.SendFailedException: Sending failed;
+  nested exception is: 
+	javax.mail.MessagingException: 530 5.7.0 Must issue a STARTTLS command first. t81sm11974047pfg.187 - gsmtp
+
+INFO    2017-11-09 12:50:10,396 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-09 12:50:12,691 [AWT-EventQueue-0] Util.Utility  - Fail to sent Email to the sameeradelpechithra@gmail.com
+ERROR   2017-11-09 12:50:12,691 [AWT-EventQueue-0] Util.Utility  - javax.mail.SendFailedException: Sending failed;
+  nested exception is: 
+	javax.mail.MessagingException: 530 5.7.0 Must issue a STARTTLS command first. g13sm11295027pfm.130 - gsmtp
+
+INFO    2017-11-09 12:50:12,691 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+INFO    2017-11-09 12:57:06,241 [AWT-EventQueue-0] View.MemberMain  - ------User U001 logged out from the system------
+INFO    2017-11-09 13:02:04,523 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-09 13:02:05,833 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+INFO    2017-11-09 13:02:39,968 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-09 13:02:40,794 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+INFO    2017-11-09 13:06:07,683 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-09 13:06:11,311 [AWT-EventQueue-0] Util.Utility  - Fail to sent Email to the sameeradelpechithra@gmail.com
+ERROR   2017-11-09 13:06:11,311 [AWT-EventQueue-0] Util.Utility  - javax.mail.SendFailedException: Sending failed;
+  nested exception is: 
+	javax.mail.AuthenticationFailedException
+INFO    2017-11-09 13:06:11,311 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+INFO    2017-11-09 13:08:08,076 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-09 13:08:10,625 [AWT-EventQueue-0] Util.Utility  - Fail to sent Email to the sameeradelpechithra@gmail.com
+ERROR   2017-11-09 13:08:10,625 [AWT-EventQueue-0] Util.Utility  - javax.mail.SendFailedException: Sending failed;
+  nested exception is: 
+	javax.mail.AuthenticationFailedException
+INFO    2017-11-09 13:08:10,625 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+INFO    2017-11-09 13:14:53,209 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-09 13:14:56,005 [AWT-EventQueue-0] Util.Utility  - Fail to sent Email to the sameeradelpechithra@gmail.com
+ERROR   2017-11-09 13:14:56,005 [AWT-EventQueue-0] Util.Utility  - javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials f11sm9189308pgp.48 - gsmtp
+
+INFO    2017-11-09 13:14:56,005 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+INFO    2017-11-09 13:16:16,244 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-09 13:16:21,118 [AWT-EventQueue-0] Util.Utility  - Email sent to the sameeradelpechithra@gmail.com Successfully
+INFO    2017-11-09 13:16:21,118 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+INFO    2017-11-09 13:19:13,927 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-09 13:19:17,932 [AWT-EventQueue-0] Util.Utility  - Email sent to the chamindu.cta@gmail.com Successfully
+INFO    2017-11-09 13:19:17,932 [AWT-EventQueue-0] View.SystemLogin  - User : U002 successfully logged in to the system
+INFO    2017-11-09 13:42:22,976 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-09 13:42:23,147 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+INFO    2017-11-09 13:43:31,024 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-09 13:43:31,180 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+INFO    2017-11-09 13:43:51,868 [AWT-EventQueue-0] Util.Utility  - Email sent to the sameeradelpechithra@gmail.com Successfully
+INFO    2017-11-09 13:43:51,868 [AWT-EventQueue-0] View.MemberMain  - Password successfully updated to the database by user: U001
+INFO    2017-11-09 13:44:35,151 [AWT-EventQueue-0] Util.Utility  - Email sent to the sameeradelpechithra@gmail.com Successfully
+INFO    2017-11-09 13:44:35,151 [AWT-EventQueue-0] View.MemberMain  - Password successfully updated to the database by user: U001
+INFO    2017-11-09 13:44:36,852 [AWT-EventQueue-0] View.MemberMain  - ------User U001 logged out from the system------

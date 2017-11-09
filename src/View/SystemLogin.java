@@ -8,6 +8,7 @@ package View;
 import static Controller.UserController.login;
 import Model.UserModel;
 import Util.Config;
+import Util.Utility;
 import static Validation.Validation.validateEmail;
 import java.awt.Color;
 import java.io.IOException;

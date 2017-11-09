@@ -19,6 +19,7 @@ import Util.Config;
 import Util.Utility;
 import Validation.UserValidation;
 import Validation.Validation;
+import static View.MemberMain.USER;
 import java.awt.Color;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -2155,6 +2156,7 @@ public class LibrarianMain extends javax.swing.JFrame {
                             jPasswordFieldCurrentPw.setText("");
                             jPasswordFieldNewPw.setText("");
                             jPasswordFieldConfirmPw.setText("");
+                            Utility.sendEmail(USER, "passwordchange");
                         }
 
                     } else {

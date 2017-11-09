@@ -15,8 +15,10 @@ import Model.RequestedBookListModel;
 import Model.SuggestionsModel;
 import Model.UserModel;
 import Util.Config;
+import Util.Utility;
 import Validation.UserValidation;
 import Validation.Validation;
+import static View.SystemLogin.LOG;
 import java.awt.Color;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -1478,6 +1480,7 @@ public class MemberMain extends javax.swing.JFrame {
                             jPasswordFieldCurrentPw.setText("");
                             jPasswordFieldNewPw.setText("");
                             jPasswordFieldConfirmPw.setText("");
+                            Utility.sendEmail(USER, "passwordchange");
                             LOG.info("Password successfully updated to the database by user: " + UID);
                         }
 
