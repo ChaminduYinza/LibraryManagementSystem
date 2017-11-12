@@ -5,6 +5,12 @@
  */
 package Validation;
 
+import Util.DBConnection;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Date;
 import javax.swing.JOptionPane;
 
@@ -65,6 +71,53 @@ public class UserValidation {
         }
 
         return staticvef;
+
+    }
+
+    public static boolean checkNIC(String nic) throws ClassNotFoundException, SQLException, IOException {
+
+        String sql = "SELECT * FROM USERS WHERE NIC = '" + nic + "'";
+        Connection connection = DBConnection.getDBConnection().getConnection();
+        Statement createstatement = connection.createStatement();
+        ResultSet result = createstatement.executeQuery(sql);
+
+        if (result.next()) {
+            return true;
+        } else {
+
+            return false;
+        }
+    }
+
+    public static boolean checkEmail(String email) throws ClassNotFoundException, SQLException, IOException {
+
+        String sql = "SELECT * FROM USERS WHERE EMAIL = '" + email + "'";
+        Connection connection = DBConnection.getDBConnection().getConnection();
+        Statement createstatement = connection.createStatement();
+        ResultSet result = createstatement.executeQuery(sql);
+
+        if (result.next()) {
+            return true;
+        } else {
+
+            return false;
+        }
+
+    }
+    
+    public static boolean checkPhone(String phone) throws ClassNotFoundException, SQLException, IOException {
+
+        String sql = "SELECT * FROM USERS WHERE CONTACT = '" + phone + "'";
+        Connection connection = DBConnection.getDBConnection().getConnection();
+        Statement createstatement = connection.createStatement();
+        ResultSet result = createstatement.executeQuery(sql);
+
+        if (result.next()) {
+            return true;
+        } else {
+
+            return false;
+        }
 
     }
 
@@ -140,7 +193,6 @@ public class UserValidation {
 
         return staticvef;
     }
-
 
     public static boolean vefPassword(String pw1, String pw2) {
         boolean staticvef = false;

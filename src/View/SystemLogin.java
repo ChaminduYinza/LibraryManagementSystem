@@ -5,10 +5,10 @@
  */
 package View;
 
+import Controller.UserController;
 import static Controller.UserController.login;
 import Model.UserModel;
 import Util.Config;
-import Util.Utility;
 import static Validation.Validation.validateEmail;
 import java.awt.Color;
 import java.io.IOException;
@@ -23,8 +23,8 @@ import javax.swing.JOptionPane;
  */
 public class SystemLogin extends javax.swing.JFrame {
 
-    
     public static final org.apache.log4j.Logger LOG = Config.getLogger(SystemLogin.class);
+
     public SystemLogin() {
         initComponents();
         this.setLocationRelativeTo(null); //Setting to display in the center of screen
@@ -107,7 +107,6 @@ public class SystemLogin extends javax.swing.JFrame {
         jButtonUserLogin.setForeground(new java.awt.Color(0, 102, 102));
         jButtonUserLogin.setText("Login");
         jButtonUserLogin.setToolTipText("");
-        jButtonUserLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)));
         jButtonUserLogin.setFocusPainted(false);
         jButtonUserLogin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -132,7 +131,7 @@ public class SystemLogin extends javax.swing.JFrame {
         jPasswordFieldUserPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)));
         LoginPanel.add(jPasswordFieldUserPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 250, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\login.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem-master\\src\\View\\Images\\login.png")); // NOI18N
         LoginPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 130, 120));
 
         jDesktopPaneLogin.add(LoginPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 370));
@@ -166,31 +165,34 @@ public class SystemLogin extends javax.swing.JFrame {
             } else {
                 try {
                     UserModel userAndID = login(user);
-                    
+
                     if (userAndID == null) {
-                        System.out.println("Login Fail");
                         JOptionPane.showMessageDialog(rootPane, "Email or Password "
                                 + "Incorrect!", "Oops!", JOptionPane.ERROR_MESSAGE);
                         LOG.info("Invalid loggin attempt by user");
 
-                    }
-                    else if (userAndID.getUserType().equals("Librarian")) {
+                    } else if (!UserController.isExpiredUser(userAndID.getUid())) {
+                        JOptionPane.showMessageDialog(rootPane, "Your Account is Expired! "
+                                + "Please contact Library Manager!"
+                                , "Oops!", JOptionPane.ERROR_MESSAGE);
+                        LOG.info("Invalid loggin attempt by user");
+                    } else if (userAndID.getUserType().equals("Librarian")) {
                         //view UI of Librarian
                         //set visibility of login and library member
                         viewLoginFrame(false);
                         LibrarianMain librarian = new LibrarianMain(user.getEmail(), userAndID.getUid());
                         librarian.setVisible(true);
                         this.dispose();
-                        LOG.info("User : "+userAndID.getUid()+" successfully logged in to the system");
+                        LOG.info("User : " + userAndID.getUid() + " successfully logged in to the system");
 
                     } else if (userAndID.getUserType().equals("Library Manager")) {
                         //view UI of Library Manager 
                         //set visibility of login and library member
                         viewLoginFrame(false);
-                        LibraryManagerMain libraryManager = new LibraryManagerMain(user.getEmail());
+                        LibraryManagerMain libraryManager = new LibraryManagerMain(user.getEmail(),user.getUid());
                         libraryManager.setVisible(true);
                         this.dispose();
-                        LOG.info("User : "+userAndID.getUid()+" successfully logged in to the system");
+                        LOG.info("User : " + userAndID.getUid() + " successfully logged in to the system");
 
                     } else if (userAndID.getUserType().equals("Member")) {
                         //view UI of Member
@@ -199,10 +201,10 @@ public class SystemLogin extends javax.swing.JFrame {
                         MemberMain member = new MemberMain(user.getEmail(), userAndID.getUid());
                         member.setVisible(true);
                         this.dispose();
-                        LOG.info("User : "+userAndID.getUid()+" successfully logged in to the system");
+                        LOG.info("User : " + userAndID.getUid() + " successfully logged in to the system");
                     }
                 } catch (ClassNotFoundException | SQLException | IOException ex) {
-                    LOG.error("Loggin attemt fail due to exception\n"+ ex);
+                    LOG.error("Loggin attemt fail due to exception\n" + ex);
                     Logger.getLogger(SystemLogin.class.getName()).log(Level.SEVERE, null, ex);
 
                 }

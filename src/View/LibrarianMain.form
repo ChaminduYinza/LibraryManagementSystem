@@ -3,7 +3,7 @@
 <Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="Library Management System : Member"/>
+    <Property name="title" type="java.lang.String" value="Library Management System : Librarian"/>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
@@ -2712,9 +2712,6 @@
                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
-                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem\src\View\Images\reservebtn.png"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="Save Changes"/>
                             <Property name="focusable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="2"/>
@@ -2990,9 +2987,6 @@
                             </Property>
                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                            </Property>
-                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Save Changes"/>
                             <Property name="focusable" type="boolean" value="false"/>

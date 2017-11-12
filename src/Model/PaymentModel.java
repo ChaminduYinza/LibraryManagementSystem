@@ -17,12 +17,12 @@ public class PaymentModel {
     Double amount;
     int noOfDays;
 
-    public PaymentModel(String pId, String uId, String paymentType, Double amount, int noOfDays) {
+    public PaymentModel(String pId, String uId, String paymentType, Double amount) {
         this.pid = pId;
         this.uid = uId;
         this.paymentType = paymentType;
         this.amount = amount;
-        this.noOfDays = noOfDays;
+//        this.noOfDays = noOfDays;
     }
 
     public String getpId() {
@@ -41,9 +41,9 @@ public class PaymentModel {
         return amount;
     }
 
-    public int getNoOfDays() {
-        return noOfDays;
-    }
+//    public int getNoOfDays() {
+//        return noOfDays;
+//    }
 
     public void setpId(String pId) {
         this.pid = pId;
@@ -61,8 +61,8 @@ public class PaymentModel {
         this.amount = amount;
     }
 
-    public void setNoOfDays(int noOfDays) {
-        this.noOfDays = noOfDays;
-    }
+//    public void setNoOfDays(int noOfDays) {
+//        this.noOfDays = noOfDays;
+//    }
 
 }

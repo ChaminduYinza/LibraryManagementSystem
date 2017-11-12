@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Sameera
+ * @author Rushan
  */
 public class UserControllerTest {
     
@@ -47,7 +47,7 @@ public class UserControllerTest {
         System.out.println("checkPasswordforReset");
         UserModel userModel = new UserModel();
         userModel.setUid("U003");
-        userModel.setPassword("000");
+        userModel.setPassword("123123a");
         
         
         boolean expResult = true;

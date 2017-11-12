@@ -68,7 +68,7 @@
             <Component class="javax.swing.JLabel" name="jLabelLogo">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem\src\View\Images\librarylogo.png"/>
+                  <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem-master\src\View\Images\librarylogo.png"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -133,7 +133,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem\src\View\Images\menuBtn.png"/>
+                  <Image iconType="3" name="/View/Images/menuBtn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="RESERVE BOOK"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
@@ -166,7 +166,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem\src\View\Images\menuBtn.png"/>
+                  <Image iconType="3" name="/View/Images/menuBtn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="REQUESTED LIST"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
@@ -199,7 +199,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem\src\View\Images\menuBtn.png"/>
+                  <Image iconType="3" name="/View/Images/menuBtn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="PENDING BOOKS"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
@@ -232,7 +232,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem\src\View\Images\menuBtn.png"/>
+                  <Image iconType="3" name="/View/Images/menuBtn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="HISTORY"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
@@ -265,7 +265,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem\src\View\Images\menuBtn.png"/>
+                  <Image iconType="3" name="/View/Images/menuBtn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="PAYMENTS"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
@@ -296,7 +296,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem\src\View\Images\menuBtn.png"/>
+                  <Image iconType="3" name="/View/Images/menuBtn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="FEEDBACK"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
@@ -329,7 +329,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem\src\View\Images\logout.png"/>
+                  <Image iconType="3" name="/View/Images/menuBtn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="LOGOUT"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
@@ -362,7 +362,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem\src\View\Images\settings.png"/>
+                  <Image iconType="3" name="/View/Images/menuBtn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="SETTINGS"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
@@ -704,7 +704,7 @@
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem\src\View\Images\reservebtn.png"/>
+                              <Image iconType="3" name="/View/Images/reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Confirm"/>
                             <Property name="focusable" type="boolean" value="false"/>
@@ -866,7 +866,7 @@
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem\src\View\Images\reservebtn.png"/>
+                              <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem-master\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Cancel Request"/>
                             <Property name="focusable" type="boolean" value="false"/>
@@ -1119,7 +1119,7 @@
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem\src\View\Images\reservebtn.png"/>
+                              <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem-master\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Submit Feedback"/>
                             <Property name="focusable" type="boolean" value="false"/>
@@ -1481,7 +1481,7 @@
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem\src\View\Images\reservebtn.png"/>
+                              <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem-master\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Submit"/>
                             <Property name="focusable" type="boolean" value="false"/>
@@ -1612,7 +1612,7 @@
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem\src\View\Images\reservebtn.png"/>
+                              <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem-master\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Submit"/>
                             <Property name="focusable" type="boolean" value="false"/>
@@ -1834,7 +1834,7 @@
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem\src\View\Images\reservebtn.png"/>
+                              <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem-master\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Save Changes"/>
                             <Property name="focusable" type="boolean" value="false"/>
@@ -1936,6 +1936,11 @@
                           </Layout>
                           <SubComponents>
                             <Component class="javax.swing.JLabel" name="jLabelPicture">
+                              <Properties>
+                                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                  <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem-master\src\View\Images\ProfilePic.png"/>
+                                </Property>
+                              </Properties>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                   <AbsoluteConstraints x="50" y="30" width="-1" height="-1"/>
@@ -2113,7 +2118,7 @@
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem\src\View\Images\reservebtn.png"/>
+                              <Image iconType="2" name="C:\SLIIT\LibraryManagementSystem-master\src\View\Images\reservebtn.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Save Changes"/>
                             <Property name="focusable" type="boolean" value="false"/>

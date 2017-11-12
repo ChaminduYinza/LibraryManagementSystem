@@ -18,7 +18,6 @@ import Util.Config;
 import Util.Utility;
 import Validation.UserValidation;
 import Validation.Validation;
-import static View.SystemLogin.LOG;
 import java.awt.Color;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -330,7 +329,7 @@ public class MemberMain extends javax.swing.JFrame {
         jPanelHeader.setBackground(new java.awt.Color(0, 102, 102));
         jPanelHeader.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelLogo.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\librarylogo.png")); // NOI18N
+        jLabelLogo.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem-master\\src\\View\\Images\\librarylogo.png")); // NOI18N
         jPanelHeader.add(jLabelLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jLabelWelcomeUser.setForeground(new java.awt.Color(204, 204, 204));
@@ -349,7 +348,7 @@ public class MemberMain extends javax.swing.JFrame {
         jButtonReserveBook.setBackground(new java.awt.Color(0, 102, 102));
         jButtonReserveBook.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 18)); // NOI18N
         jButtonReserveBook.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonReserveBook.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\menuBtn.png")); // NOI18N
+        jButtonReserveBook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/menuBtn.png"))); // NOI18N
         jButtonReserveBook.setText("RESERVE BOOK");
         jButtonReserveBook.setFocusPainted(false);
         jButtonReserveBook.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -373,7 +372,7 @@ public class MemberMain extends javax.swing.JFrame {
         jButtonRequestedBookList.setBackground(new java.awt.Color(0, 102, 102));
         jButtonRequestedBookList.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 18)); // NOI18N
         jButtonRequestedBookList.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonRequestedBookList.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\menuBtn.png")); // NOI18N
+        jButtonRequestedBookList.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/menuBtn.png"))); // NOI18N
         jButtonRequestedBookList.setText("REQUESTED LIST");
         jButtonRequestedBookList.setFocusPainted(false);
         jButtonRequestedBookList.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -397,7 +396,7 @@ public class MemberMain extends javax.swing.JFrame {
         jButtonPendingReturn.setBackground(new java.awt.Color(0, 102, 102));
         jButtonPendingReturn.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 18)); // NOI18N
         jButtonPendingReturn.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonPendingReturn.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\menuBtn.png")); // NOI18N
+        jButtonPendingReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/menuBtn.png"))); // NOI18N
         jButtonPendingReturn.setText("PENDING BOOKS");
         jButtonPendingReturn.setFocusPainted(false);
         jButtonPendingReturn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -421,7 +420,7 @@ public class MemberMain extends javax.swing.JFrame {
         jButtonHistory.setBackground(new java.awt.Color(0, 102, 102));
         jButtonHistory.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 18)); // NOI18N
         jButtonHistory.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonHistory.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\menuBtn.png")); // NOI18N
+        jButtonHistory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/menuBtn.png"))); // NOI18N
         jButtonHistory.setText("HISTORY");
         jButtonHistory.setFocusPainted(false);
         jButtonHistory.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -445,7 +444,7 @@ public class MemberMain extends javax.swing.JFrame {
         jButtonPayments.setBackground(new java.awt.Color(0, 102, 102));
         jButtonPayments.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 18)); // NOI18N
         jButtonPayments.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonPayments.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\menuBtn.png")); // NOI18N
+        jButtonPayments.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/menuBtn.png"))); // NOI18N
         jButtonPayments.setText("PAYMENTS");
         jButtonPayments.setFocusPainted(false);
         jButtonPayments.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -461,7 +460,7 @@ public class MemberMain extends javax.swing.JFrame {
         jButtonFeedback.setBackground(new java.awt.Color(0, 102, 102));
         jButtonFeedback.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 18)); // NOI18N
         jButtonFeedback.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonFeedback.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\menuBtn.png")); // NOI18N
+        jButtonFeedback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/menuBtn.png"))); // NOI18N
         jButtonFeedback.setText("FEEDBACK");
         jButtonFeedback.setFocusPainted(false);
         jButtonFeedback.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -485,7 +484,7 @@ public class MemberMain extends javax.swing.JFrame {
         jButtonLogout.setBackground(new java.awt.Color(0, 102, 102));
         jButtonLogout.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 18)); // NOI18N
         jButtonLogout.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonLogout.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\logout.png")); // NOI18N
+        jButtonLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/menuBtn.png"))); // NOI18N
         jButtonLogout.setText("LOGOUT");
         jButtonLogout.setFocusPainted(false);
         jButtonLogout.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -509,7 +508,7 @@ public class MemberMain extends javax.swing.JFrame {
         jButtonSettings.setBackground(new java.awt.Color(0, 102, 102));
         jButtonSettings.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 18)); // NOI18N
         jButtonSettings.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSettings.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\settings.png")); // NOI18N
+        jButtonSettings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/menuBtn.png"))); // NOI18N
         jButtonSettings.setText("SETTINGS");
         jButtonSettings.setFocusPainted(false);
         jButtonSettings.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -619,7 +618,7 @@ public class MemberMain extends javax.swing.JFrame {
         jButtonConfirmReservation.setBackground(new java.awt.Color(0, 102, 102));
         jButtonConfirmReservation.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButtonConfirmReservation.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonConfirmReservation.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\reservebtn.png")); // NOI18N
+        jButtonConfirmReservation.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/reservebtn.png"))); // NOI18N
         jButtonConfirmReservation.setText("Confirm");
         jButtonConfirmReservation.setFocusable(false);
         jButtonConfirmReservation.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -679,7 +678,7 @@ public class MemberMain extends javax.swing.JFrame {
         jButtonCancelRequest.setBackground(new java.awt.Color(0, 102, 102));
         jButtonCancelRequest.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButtonCancelRequest.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonCancelRequest.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\reservebtn.png")); // NOI18N
+        jButtonCancelRequest.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem-master\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonCancelRequest.setText("Cancel Request");
         jButtonCancelRequest.setFocusable(false);
         jButtonCancelRequest.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -779,7 +778,7 @@ public class MemberMain extends javax.swing.JFrame {
         jButtonSubmitFeedback.setBackground(new java.awt.Color(0, 102, 102));
         jButtonSubmitFeedback.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButtonSubmitFeedback.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSubmitFeedback.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\reservebtn.png")); // NOI18N
+        jButtonSubmitFeedback.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem-master\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonSubmitFeedback.setText("Submit Feedback");
         jButtonSubmitFeedback.setFocusable(false);
         jButtonSubmitFeedback.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -893,7 +892,7 @@ public class MemberMain extends javax.swing.JFrame {
         jButtonFeedbackSumbit.setBackground(new java.awt.Color(0, 102, 102));
         jButtonFeedbackSumbit.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButtonFeedbackSumbit.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonFeedbackSumbit.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\reservebtn.png")); // NOI18N
+        jButtonFeedbackSumbit.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem-master\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonFeedbackSumbit.setText("Submit");
         jButtonFeedbackSumbit.setFocusable(false);
         jButtonFeedbackSumbit.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -931,7 +930,7 @@ public class MemberMain extends javax.swing.JFrame {
         jButtonSubmitSuggestion.setBackground(new java.awt.Color(0, 102, 102));
         jButtonSubmitSuggestion.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButtonSubmitSuggestion.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSubmitSuggestion.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\reservebtn.png")); // NOI18N
+        jButtonSubmitSuggestion.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem-master\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonSubmitSuggestion.setText("Submit");
         jButtonSubmitSuggestion.setFocusable(false);
         jButtonSubmitSuggestion.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1007,7 +1006,7 @@ public class MemberMain extends javax.swing.JFrame {
         jButtonSave.setBackground(new java.awt.Color(0, 102, 102));
         jButtonSave.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButtonSave.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSave.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\reservebtn.png")); // NOI18N
+        jButtonSave.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem-master\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonSave.setText("Save Changes");
         jButtonSave.setFocusable(false);
         jButtonSave.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1074,7 +1073,7 @@ public class MemberMain extends javax.swing.JFrame {
         jButtonChangePassword.setBackground(new java.awt.Color(0, 102, 102));
         jButtonChangePassword.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButtonChangePassword.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonChangePassword.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\reservebtn.png")); // NOI18N
+        jButtonChangePassword.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem-master\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonChangePassword.setText("Save Changes");
         jButtonChangePassword.setFocusable(false);
         jButtonChangePassword.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1302,7 +1301,7 @@ public class MemberMain extends javax.swing.JFrame {
             if (RequestedBookController.addBookRequest(new RequestedBookListModel(jTextFieldRequestedBookId.getText(), UID, jTextFieldBookId.getText(),
                     jTextFieldReserveBookName.getText()))) {
                 JOptionPane.showMessageDialog(rootPane, "Request Successfully Added!",
-                        "Success!", JOptionPane.PLAIN_MESSAGE);
+                        "Success!", JOptionPane.INFORMATION_MESSAGE);
                 jTabbedPaneReserveBook.setSelectedIndex(0);
                 jTabbedPaneReserveBook.setEnabledAt(1, false);
                 LOG.info("Book request " + jTextFieldRequestedBookId.getText() + " added to the database");
@@ -1331,7 +1330,7 @@ public class MemberMain extends javax.swing.JFrame {
                 if (result == 0) {
                     if (RequestedBookController.cancelBookRequest(new RequestedBookListModel(rID, UID, bID, bookName))) {
                         JOptionPane.showMessageDialog(rootPane, "Book Request "
-                                + "Cancelled Successfully!", "Success!", JOptionPane.PLAIN_MESSAGE);
+                                + "Cancelled Successfully!", "Success!", JOptionPane.INFORMATION_MESSAGE);
                         loadRequestedBookData();
                         LOG.info("Book request " + rID + " canceled/deleted by user " + UID);
                     } else {
@@ -1419,7 +1418,7 @@ public class MemberMain extends javax.swing.JFrame {
                 if (FeedbackController.addFeedback(new BookFeedbackModel(jTextFieldFID.getText(), jTextFieldBookIdFeedback.getText(),
                         jTextAreaDescriptionFeedback.getText(), jTextFieldFeedbackFullName.getText()))) {
                     JOptionPane.showMessageDialog(rootPane, "Feedback Successfully"
-                            + " Submitted for Approval!", "Success!", JOptionPane.PLAIN_MESSAGE);
+                            + " Submitted for Approval!", "Success!", JOptionPane.INFORMATION_MESSAGE);
                     loadHistoryBookData();
                     togglePanels("History");
                     jTextFieldFeedbackFullName.setText("");
@@ -1449,7 +1448,7 @@ public class MemberMain extends javax.swing.JFrame {
                         + "number", "Error!", JOptionPane.ERROR_MESSAGE);
             } else if (updateUser(UID, contact)) {
                 JOptionPane.showMessageDialog(rootPane, "Details Updated Successfully!",
-                        "Success!", JOptionPane.PLAIN_MESSAGE);
+                        "Success!", JOptionPane.INFORMATION_MESSAGE);
                 LOG.info("User details successfully updated to the database by user: " + UID);
             } else {
                 JOptionPane.showMessageDialog(rootPane, "Error occured while Updating",
@@ -1476,7 +1475,7 @@ public class MemberMain extends javax.swing.JFrame {
                     if (!jPasswordFieldCurrentPw.getText().equals(jPasswordFieldNewPw.getText())) {
                         if (UserController.updatePassword(UID, jPasswordFieldNewPw.getText())) {
                             JOptionPane.showMessageDialog(rootPane, "Password Updated "
-                                    + "Successfully!", "Success!", JOptionPane.PLAIN_MESSAGE);
+                                    + "Successfully!", "Success!", JOptionPane.INFORMATION_MESSAGE);
                             jPasswordFieldCurrentPw.setText("");
                             jPasswordFieldNewPw.setText("");
                             jPasswordFieldConfirmPw.setText("");
@@ -1533,7 +1532,7 @@ public class MemberMain extends javax.swing.JFrame {
                         jTextAreaSuggestionDes.getText()));
                 if (result) {
                     JOptionPane.showMessageDialog(rootPane, "Suggesstion Submitted"
-                            + " to the Manager!", "Success!", JOptionPane.PLAIN_MESSAGE);
+                            + " to the Manager!", "Success!", JOptionPane.INFORMATION_MESSAGE);
                     jTextAreaSuggestionDes.setText("");
                     jTextFieldSuggestionId.setText(SuggestionController.autoGenerateSuggestionID());
                     LOG.info("Suggestions successfully added to the database by user: " + UID);

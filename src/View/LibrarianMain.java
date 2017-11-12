@@ -99,7 +99,8 @@ public class LibrarianMain extends javax.swing.JFrame {
 
         try {
             Utility.loadTable(tblMemebers, "SELECT UID, CONCAT(FIRSTNAME,' ',LASTNAME)"
-                    + " AS 'NAME', NIC, ADDRESS, CONTACT, EMAIL,MAXIMUMBOOKCOUNT,BORROWEDBOOKCOUNT FROM USERS");
+                    + " AS 'NAME', NIC, ADDRESS, CONTACT, EMAIL,MAXIMUMBOOKCOUNT,BORROWEDBOOKCOUNT"
+                    + " FROM USERS WHERE USERTYPE = 'MEMBER'");
 
         } catch (ClassNotFoundException | SQLException | IOException ex) {
             LOG.error("Failed to load user list data to the table \n" + ex);
@@ -397,7 +398,7 @@ public class LibrarianMain extends javax.swing.JFrame {
         jButtonChangePassword = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Library Management System : Member");
+        setTitle("Library Management System : Librarian");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1332,7 +1333,6 @@ public class LibrarianMain extends javax.swing.JFrame {
         jButtonSave.setBackground(new java.awt.Color(0, 102, 102));
         jButtonSave.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButtonSave.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSave.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonSave.setText("Save Changes");
         jButtonSave.setFocusable(false);
         jButtonSave.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1356,8 +1356,6 @@ public class LibrarianMain extends javax.swing.JFrame {
         jPanelProfilepic.setBackground(new java.awt.Color(255, 255, 255));
         jPanelProfilepic.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 51)));
         jPanelProfilepic.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabelPicture.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem-master\\src\\View\\Images\\ProfilePic.png")); // NOI18N
         jPanelProfilepic.add(jLabelPicture, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
 
         jLabelUserEmail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -1399,7 +1397,6 @@ public class LibrarianMain extends javax.swing.JFrame {
         jButtonChangePassword.setBackground(new java.awt.Color(0, 102, 102));
         jButtonChangePassword.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButtonChangePassword.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonChangePassword.setIcon(new javax.swing.ImageIcon("C:\\SLIIT\\LibraryManagementSystem\\src\\View\\Images\\reservebtn.png")); // NOI18N
         jButtonChangePassword.setText("Save Changes");
         jButtonChangePassword.setFocusable(false);
         jButtonChangePassword.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1609,6 +1606,12 @@ public class LibrarianMain extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Invalid renew date", "Error!", JOptionPane.ERROR_MESSAGE);
         } else if (!tfIssueBookBID.getText().isEmpty()) {
             try {
+                if (!UserController.isExpiredUser(tfIssueBookUID.getText())) {
+                    System.out.println(UserController.isExpiredUser(tfIssueBookUID.getText()));
+                    JOptionPane.showMessageDialog(rootPane, "The user account is expired, "
+                            + "Can't issue books for the mentioned user", "Notify!", JOptionPane.INFORMATION_MESSAGE);
+                    return;
+                }
                 String message = BookController.issueBook(new BorrowedBookModel(tfIssueBBID.getText(), tfIssueBookUID.getText(), tfIssueBookBID.getText(), "", tfIssueBookRenewDate.getDate()), isReserved);
                 JOptionPane.showMessageDialog(rootPane, message, "Notify!", JOptionPane.INFORMATION_MESSAGE);
                 LOG.info(message);
@@ -1687,11 +1690,12 @@ public class LibrarianMain extends javax.swing.JFrame {
                                     if (BookController.addBook(new BookModel(tfAddBookBID.getText(), tfAddBookBookName.getText(), tfAddBookAuthorName.getText(), tfAddBookQty.getText(), tfAddBookISBN.getText(), Description, "Yes", tfAddBookVersion.getText(), tfAddBookQty.getText()))) {
                                         JOptionPane.showMessageDialog(rootPane, "Successfully added", "Success!", JOptionPane.INFORMATION_MESSAGE);
                                         loadManageBookTable();
+                                        LOG.info("Successfully inserted (" + tfAddBookISBN.getText() + ") book to the database");
                                         clearAddBookdata();
-                                        LOG.info("Successfully inserted (" + tfAddBookISBN.getText().toString() + ") book to the database");
+
                                     } else {
                                         JOptionPane.showMessageDialog(rootPane, "Error occured while inserting", "Error!", JOptionPane.ERROR_MESSAGE);
-                                        LOG.info("Error occured while inserting (" + tfAddBookISBN.getText().toString() + ") book to the database");
+                                        LOG.info("Error occured while inserting (" + tfAddBookISBN.getText() + ") book to the database");
                                     }
 
                                 } catch (ClassNotFoundException | SQLException | IOException ex) {
@@ -1806,13 +1810,15 @@ public class LibrarianMain extends javax.swing.JFrame {
                 try {
                     if (BookController.deleteBorrowedByBBID(tblBorrowedBookHistory.getValueAt(row, 0).toString(), tblBorrowedBookHistory.getValueAt(row, 2).toString(), tblBorrowedBookHistory.getValueAt(row, 1).toString())) {
                         JOptionPane.showMessageDialog(rootPane, "Successfully deleted", "Deleted!", JOptionPane.INFORMATION_MESSAGE);
+                        LOG.info("Successfully deleted (" + tblBorrowedBookHistory.getValueAt(row, 1).toString() + ") book");
                         loadBorrowedBookData("SELECT BBID AS 'Borrowed ID', UID , BID, ISSUEDATE, RENEWDATE FROM borrowedbooks GROUP BY BBID DESC");
-                        //LOG.info("Successfully deleted ("++")");
-                        //METHANATA WENAKAN GAHUWA FRIEND =) Mmmmm
+                        
                     } else {
                         JOptionPane.showMessageDialog(rootPane, "Error occured, please try again", "Error!", JOptionPane.ERROR_MESSAGE);
+                        LOG.info("Error occurred while deleting (" + tblBorrowedBookHistory.getValueAt(row, 1).toString() + ") book");
                     }
                 } catch (ClassNotFoundException | SQLException | IOException ex) {
+                    LOG.error("Error occurred while deleting book data\n" + ex);
                     Logger.getLogger(LibrarianMain.class.getName()).log(Level.SEVERE, null, ex);
                 }
 
@@ -1832,13 +1838,16 @@ public class LibrarianMain extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(rootPane, "Invalid renew date", "Error!", JOptionPane.ERROR_MESSAGE);
             } else if (BookController.updateBorrowedBook(tfHistoryBBID.getText(), tfHistoryRenewDate.getDate(), 0)) {
                 JOptionPane.showMessageDialog(rootPane, "Successfully edited", "Success!", JOptionPane.INFORMATION_MESSAGE);
+                LOG.info("Successfully updated (" + tfHistoryBookName.getText() + ") borrowed book renew date for user (" + tfHistoryUID.getText() + ")");
                 loadBorrowedBookData("SELECT BBID AS 'Borrowed ID', UID , BID, ISSUEDATE, RENEWDATE FROM borrowedbooks GROUP BY BBID DESC");
                 clearHistoryData();
             } else {
+                LOG.info("Error occurred while updating (" + tfHistoryBookName.getText() + ") borrowed book renew date for user (" + tfHistoryUID.getText() + ")");
                 JOptionPane.showMessageDialog(rootPane, "Error occrued while processing", "Error!", JOptionPane.ERROR_MESSAGE);
             }
 
         } catch (ClassNotFoundException | SQLException | IOException ex) {
+            LOG.error("Error occurred while updating borrowed book history (Renew Date)\n" + ex);
             Logger.getLogger(LibrarianMain.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnHistoryUpdateActionPerformed
@@ -1861,6 +1870,7 @@ public class LibrarianMain extends javax.swing.JFrame {
             tfHistoryRenewDate.setDate(date);
             tbBorrowedHistory.setSelectedIndex(1);
         } catch (ClassNotFoundException | ParseException | SQLException | IOException ex) {
+            LOG.error("Error occurred while loading borrowed book history table\n" + ex);
             Logger.getLogger(LibrarianMain.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -1877,14 +1887,18 @@ public class LibrarianMain extends javax.swing.JFrame {
                         JOptionPane.QUESTION_MESSAGE) == JOptionPane.YES_OPTION) {
                     if (BookController.deleteBookByISBN(tblManageBook.getValueAt(row, 3).toString())) {
                         JOptionPane.showMessageDialog(rootPane, "Successfully deleted", "Deleted!", JOptionPane.INFORMATION_MESSAGE);
+                        LOG.info("Successfully deleted (" + tblManageBook.getValueAt(row, 1).toString() + ") borrowed book");
                         loadManageBookTable();
+
                     } else {
                         JOptionPane.showMessageDialog(rootPane, "Error occured, please try again", "Error!", JOptionPane.ERROR_MESSAGE);
+                        LOG.info("Error occurred while deleting (" + tblManageBook.getValueAt(row, 1).toString() + ") borrowed book");
 
                     }
                 }
 
             } catch (ClassNotFoundException | SQLException | IOException ex) {
+                LOG.error("Error occurred while deleting borrowed book data\n" + ex);
                 Logger.getLogger(LibrarianMain.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
@@ -1921,15 +1935,18 @@ public class LibrarianMain extends javax.swing.JFrame {
                         JOptionPane.YES_NO_OPTION,
                         JOptionPane.QUESTION_MESSAGE) == JOptionPane.YES_OPTION) {
                     if (BookController.deleteBookFeedbacksByFID(tblFeedbacks.getValueAt(row, 0).toString())) {
+                        LOG.info("Successfully deleted FID (" + tblFeedbacks.getValueAt(row, 0).toString() + ") book feedback");
                         JOptionPane.showMessageDialog(rootPane, "Successfully deleted", "Deleted!", JOptionPane.INFORMATION_MESSAGE);
                         loadFeedbackTable();
                     } else {
-                        JOptionPane.showMessageDialog(rootPane, "Error occured, please try again", "Error!", JOptionPane.ERROR_MESSAGE);
+                        LOG.info("Error occurred while deleting FID (" + tblFeedbacks.getValueAt(row, 0).toString() + ") book feedback");
+                        JOptionPane.showMessageDialog(rootPane, "Error occurred, please try again", "Error!", JOptionPane.ERROR_MESSAGE);
 
                     }
                 }
 
             } catch (ClassNotFoundException | SQLException | IOException ex) {
+                LOG.error("Error occurred while deleting book feedback data\n" + ex);
                 Logger.getLogger(LibrarianMain.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
@@ -1954,8 +1971,10 @@ public class LibrarianMain extends javax.swing.JFrame {
                         JOptionPane.showMessageDialog(rootPane, "Selected feedback is already approved", "Error!", JOptionPane.ERROR_MESSAGE);
                     } else if (BookController.approveBookFeedBack(tblFeedbacks.getValueAt(row, 0).toString())) {
                         JOptionPane.showMessageDialog(rootPane, "Successfully approved", "Approved!", JOptionPane.INFORMATION_MESSAGE);
+                        LOG.info("Successfully approved FID : (" + tblFeedbacks.getValueAt(row, 0).toString() + ") book feedback");
                         loadFeedbackTable();
                     } else {
+                        LOG.info("Error occurred while approving FID : (" + tblFeedbacks.getValueAt(row, 0).toString() + ") book feedback");
                         JOptionPane.showMessageDialog(rootPane, "Error occured, please try again", "Error!", JOptionPane.ERROR_MESSAGE);
 
                     }
@@ -1963,6 +1982,7 @@ public class LibrarianMain extends javax.swing.JFrame {
                 }
 
             } catch (ClassNotFoundException | SQLException | IOException ex) {
+                LOG.error("Error occurred while approving book feedback data\n" + ex);
                 Logger.getLogger(LibrarianMain.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {

@@ -1,0 +1,73 @@
+ERROR   2017-11-04 10:52:15,852 [AWT-EventQueue-0] Util.DBConnection  - Failed to connect to the database
+ERROR   2017-11-04 10:52:30,734 [AWT-EventQueue-0] Util.DBConnection  - Failed to connect to the database
+ERROR   2017-11-04 10:52:53,782 [AWT-EventQueue-0] Util.DBConnection  - Failed to connect to the database
+INFO    2017-11-04 10:52:53,791 [AWT-EventQueue-0] View.MemberMain  - Data retrieved from the table row
+INFO    2017-11-04 11:08:18,606 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+ERROR   2017-11-04 11:08:29,363 [AWT-EventQueue-0] Util.DBConnection  - Failed to connect to the database
+ERROR   2017-11-04 11:08:39,253 [AWT-EventQueue-0] Util.DBConnection  - Failed to connect to the database
+INFO    2017-11-04 11:08:39,261 [AWT-EventQueue-0] View.MemberMain  - Data retrieved from the table row
+ERROR   2017-11-04 11:08:41,688 [AWT-EventQueue-0] Util.DBConnection  - Failed to connect to the database
+INFO    2017-11-04 11:08:43,958 [AWT-EventQueue-0] View.MemberMain  - Book request R009 added to the database
+INFO    2017-11-04 11:10:17,476 [AWT-EventQueue-0] View.MemberMain  - ------User U001 logged out from the system------
+ERROR   2017-11-04 11:11:37,114 [AWT-EventQueue-0] Util.DBConnection  - Retrying to connect to the database
+INFO    2017-11-04 11:11:37,561 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+ERROR   2017-11-04 11:11:50,674 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+ERROR   2017-11-04 11:11:54,004 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:11:54,014 [AWT-EventQueue-0] View.MemberMain  - Data retrieved from the table row
+ERROR   2017-11-04 11:11:55,746 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:11:58,772 [AWT-EventQueue-0] View.MemberMain  - Book request R010 added to the database
+INFO    2017-11-04 11:13:16,948 [AWT-EventQueue-0] View.MemberMain  - ------User U001 logged out from the system------
+INFO    2017-11-04 11:13:39,244 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-04 11:13:39,692 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+INFO    2017-11-04 11:13:42,492 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:13:43,600 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:13:43,608 [AWT-EventQueue-0] View.MemberMain  - Data retrieved from the table row
+INFO    2017-11-04 11:13:45,393 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:13:47,479 [AWT-EventQueue-0] View.MemberMain  - Book request R011 added to the database
+INFO    2017-11-04 11:13:55,567 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:14:02,223 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:14:03,921 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:14:03,925 [AWT-EventQueue-0] View.MemberMain  - Book request R009 canceled/deleted by user U001
+INFO    2017-11-04 11:14:10,263 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:14:14,960 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:14:16,297 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:14:35,917 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:14:37,578 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:14:37,589 [AWT-EventQueue-0] View.MemberMain  - Feedback successfully added to the database by user: U001
+INFO    2017-11-04 11:14:42,988 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:14:44,438 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:14:45,449 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:14:48,609 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:14:53,782 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:14:53,784 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:14:56,012 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:15:30,101 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:15:30,104 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:15:30,882 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:15:30,883 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:15:38,014 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:15:41,635 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:15:48,486 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:15:49,135 [AWT-EventQueue-0] View.MemberMain  - User details successfully updated to the database by user: U001
+INFO    2017-11-04 11:16:01,463 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:17:37,565 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:17:45,426 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:17:46,267 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:17:47,977 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:17:49,128 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:19:56,245 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:20:07,895 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:20:13,449 [AWT-EventQueue-0] View.MemberMain  - ------User U001 logged out from the system------
+INFO    2017-11-04 11:20:24,027 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:20:25,083 [AWT-EventQueue-0] View.SystemLogin  - Invalid loggin attempt by user
+INFO    2017-11-04 11:20:29,591 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:20:30,774 [AWT-EventQueue-0] View.SystemLogin  - Invalid loggin attempt by user
+INFO    2017-11-04 11:20:50,433 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:20:50,520 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+INFO    2017-11-04 11:20:52,481 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:21:03,395 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:21:05,470 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:21:06,709 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:21:06,714 [AWT-EventQueue-0] Util.DBConnection  - Connected to the database
+INFO    2017-11-04 11:21:08,317 [AWT-EventQueue-0] View.MemberMain  - Password successfully updated to the database by user: U001
+INFO    2017-11-04 11:21:50,225 [AWT-EventQueue-0] View.MemberMain  - ------User U001 logged out from the system------

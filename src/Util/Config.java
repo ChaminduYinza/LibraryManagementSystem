@@ -34,7 +34,7 @@ public class Config {
     public static Logger getLogger(Class className){
         Logger LOG;
         
-        PropertyConfigurator.configure(Utility.PROPERTY_FILE_PATH);
+        PropertyConfigurator.configure(System.getProperty("user.dir") + "\\src\\util\\Application.properties");
         LOG = Logger.getLogger(className);
         return LOG;
     }

@@ -186,7 +186,12 @@ and open the template in the editor.
     <query key="AutoGenerateFineID">
         <entry>SELECT FID  FROM FINES ORDER BY FID DESC</entry>
     </query>
-	
+    <!--Users-->
+    <!--Is Expired-->
+    <query key="IsExpiredUser">
+        <entry>SELECT * FROM USERS WHERE EXPIRYDATE > CURDATE() AND UID = ?</entry>
+    </query>
+     
 	
 	
 	

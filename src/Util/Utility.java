@@ -91,25 +91,67 @@ public class Utility {
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
         props.put("mail.smtp.port", "587");
-        
+
         Session session = Session.getDefaultInstance(props,
                 new javax.mail.Authenticator() {
-                    protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(username, password);
-                    }
-                });
-        
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(username, password);
+            }
+        });
+
         String body = "";
-        
-        if(subject== "passwordchange"){
+
+        if (subject == "passwordchange") {
             subject = prop.getProperty("PasswordChangeSubject");
             body = prop.getProperty("PasswordChangeBody");
-        }
-        else if(subject == "Register"){
+        } else if (subject == "Register") {
             subject = prop.getProperty("RegisterSubject");
             body = prop.getProperty("RegisterBody");
         }
+
+        try {
+
+            Message message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(prop.getProperty("EmailAddress")));
+            message.setRecipients(Message.RecipientType.TO,
+                    InternetAddress.parse(senderMail));
+            message.setSubject(subject);
+            message.setText(body);
+
+            Transport.send(message);
+
+            LOG.info("Email sent to the " + senderMail + " Successfully");
+            return true;
+
+        } catch (MessagingException e) {
+            LOG.info("Fail to sent Email to the " + senderMail);
+            LOG.error(e);
+        }
+
+        return false;
+    }
+
+    public static boolean sendMessage(String senderMail, String subject, String body) throws IOException {
+
+        Properties prop = Config.getPropValues();
+        final String username = prop.getProperty("EmailAddress");
+        final String password = prop.getProperty("EmailPassword");
+
+        Properties props = new Properties();
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
+        props.put("mail.smtp.port", "587");
+
+        Session session = Session.getDefaultInstance(props,
+                new javax.mail.Authenticator() {
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(username, password);
+            }
+        });
 
         try {
 

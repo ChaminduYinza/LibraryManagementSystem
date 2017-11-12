@@ -1,0 +1,23 @@
+INFO    2017-11-10 21:46:53,345 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-10 21:46:53,715 [AWT-EventQueue-0] View.SystemLogin  - User : U003 successfully logged in to the system
+INFO    2017-11-10 21:58:09,928 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-10 22:00:47,111 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-10 22:06:09,249 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-10 22:06:09,805 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+INFO    2017-11-10 22:06:31,135 [AWT-EventQueue-0] Util.Utility  - Email sent to the sameeradelpechithra@gmail.com Successfully
+INFO    2017-11-10 22:06:31,135 [AWT-EventQueue-0] View.MemberMain  - Password successfully updated to the database by user: U001
+INFO    2017-11-10 22:07:20,833 [AWT-EventQueue-0] View.MemberMain  - ------User U001 logged out from the system------
+INFO    2017-11-10 22:07:37,878 [AWT-EventQueue-0] View.SystemLogin  - Invalid loggin attempt by user
+INFO    2017-11-10 22:07:59,088 [AWT-EventQueue-0] View.SystemLogin  - User : U003 successfully logged in to the system
+INFO    2017-11-10 22:24:49,995 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-10 22:24:51,375 [AWT-EventQueue-0] View.SystemLogin  - Invalid loggin attempt by user
+INFO    2017-11-10 22:24:54,922 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+INFO    2017-11-10 22:36:30,569 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-10 22:36:31,998 [AWT-EventQueue-0] View.SystemLogin  - Invalid loggin attempt by user
+INFO    2017-11-10 22:36:40,303 [AWT-EventQueue-0] View.SystemLogin  - Invalid loggin attempt by user
+INFO    2017-11-10 22:36:52,149 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
+INFO    2017-11-10 22:37:50,933 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-10 22:38:03,579 [AWT-EventQueue-0] View.SystemLogin  - Invalid loggin attempt by user
+INFO    2017-11-10 22:38:47,456 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-10 22:39:01,012 [AWT-EventQueue-0] View.SystemLogin  - Invalid loggin attempt by user
+INFO    2017-11-10 22:41:36,708 [AWT-EventQueue-0] View.SystemLogin  - User : U001 successfully logged in to the system
