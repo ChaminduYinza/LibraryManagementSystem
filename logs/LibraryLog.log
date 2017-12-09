@@ -1,4 +1,4 @@
-INFO    2017-11-11 08:53:05,034 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
+INFO    2017-11-11 08:53:05,034 [AWT-EventQueue-0] AUtil.DBConnection  - ------Initializing database connection------
 INFO    2017-11-11 08:53:06,382 [AWT-EventQueue-0] View.SystemLogin  - User : U003 successfully logged in to the system
 INFO    2017-11-11 08:59:22,084 [AWT-EventQueue-0] Util.DBConnection  - ------Initializing database connection------
 INFO    2017-11-11 08:59:23,104 [AWT-EventQueue-0] View.SystemLogin  - User : U003 successfully logged in to the system
